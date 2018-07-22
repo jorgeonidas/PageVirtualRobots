@@ -17,37 +17,21 @@
 })
 $("#liInicio").hover();
 if ( $(window).width() > 739) {      
-src="images/logoWeb.png"
+$("#navBarBrand").attr("src", "../images/LogoGris.png" ); 
  $("#footer").addClass("fixed-bottom "); 
 } 
 
 else {
 
 $("#footer").removeClass("fixed-bottom ");
+ $("#navBarBrand").attr("src", "../images/LogoGrisMovil.png" ); 
   //Add your javascript for small screens here 
 }
 
 
 });
 
-$( document ).load(function() {
-    $('.carousel').carousel({
-  interval: 3000
-})
-$("#liInicio").hover();
-if ( $(window).width() > 739) {      
 
- $("#footer").addClass("fixed-bottom "); 
-} 
-
-else {
-
-$("#footer").removeClass("fixed-bottom ");
-  //Add your javascript for small screens here 
-}
-
-
-});
 
 
 
@@ -93,23 +77,24 @@ $("#footer").removeClass("fixed-bottom ");
 </head>
 <body>
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top shadow-lg  ">
-  <!-- Brand/logo -->
-  <a class="navbar-brand" href="#">
-	<img class="d-block" src="../images/logoWeb.png" alt="Logo">
-  </a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+ 
   
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+   <!-- Brand/logo -->
+  <a class="navbar-brand mx-auto" href="#">
+	<img class="d-block" id="navBarBrand"  alt="Logo">
+  </a>
   
   <div class="collapse navbar-collapse" id="navbarToggler">
   <!-- Links -->
-  <ul class="navbar-nav">
+  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
     <li class="nav-item " >
       <a class="nav-link " href="../">Inicio</a>
     </li>
-    <li class="nav-item" id="liInicio">
+    <li class="nav-item " id="liInicio">
       <a class="nav-link" href="#">Noticias</a>
     </li>
   
