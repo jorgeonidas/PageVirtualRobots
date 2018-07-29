@@ -11,72 +11,35 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script>
-   $( document ).ready(function() {
-    $('.carousel').carousel({
-  interval: 3000
-})
-$("#liInicio").hover();
-if ( $(window).width() > 739) {      
-src="images/logoWeb.png"
- $("#footer").addClass("fixed-bottom "); 
- $("#navBarBrand").attr("src", "images/LogoGris.png" ); 
-} 
+	   $( document ).ready(function() {
+		$('.carousel').carousel({
+		interval: 3000
+		})
+		
+		$("#liInicio").hover();
+		if ( $(window).width() > 739) {      
+			src="images/logoWeb.png"
+			$("#footer").addClass("fixed-bottom "); 
+			$("#navBarBrand").attr("src", "images/LogoGris.png" ); 
+		} 
 
-else {
+		else {
 
-$("#footer").removeClass("fixed-bottom ");
- $("#navBarBrand").attr("src", "images/LogoGrisMovil.png" ); 
-  //Add your javascript for small screens here 
-}
-
-
-});
+			$("#footer").removeClass("fixed-bottom ");
+			$("#navBarBrand").attr("src", "images/LogoGrisMovil.png" ); 
+		}
 
 
-
+	});
   </script>
-  <style>
-   .navbar-nav>li>a:hover
-    {
-      text-decoration: none;
-	  font-weight:normal;
-    border-bottom: 5px solid #ffffff;
-   }
-   
-   #divNoticias {
-	margin-top:15px;
-	
-   
-   }
   
-   
-   
-    .navbar-nav>li>a
-    {
-     font-weight:bold;
-   }
-   
-   #liInicio>a {
-	text-decoration: none;
-	  font-weight:normal;
-    border-bottom: 5px solid #ffffff;
-	}
-	
-	.list-group-item {
-    float: left;
-    border: 0 !important;
-    margin: 0px;
-    padding: 10px 0px;
-}
+  <link rel="stylesheet" href="css/site.css">
 
-  
-  
-  </style>
   
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg">
  
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -173,7 +136,10 @@ $("#footer").removeClass("fixed-bottom ");
 <div class="row">
 
 
-  <div class="offset-lg-2"><p  style="font-size:0.8rem;"  class=" text-muted">© 2016 - 2018 Virtual Robot®. Biowiza S.A. All Rights Reserved. Costa Rica. You can check our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a> .</p></div>
+  <div class="offset-lg-2">
+	<p  style="font-size:0.8rem;"  class=" text-muted">© 2016 - 2018 Virtual Robot®. Biowiza S.A. Todos los derechos reservados. Costa Rica. 
+	Puedes revisar nuestros  <a class="links" href="#">Términos de Uso </a> y  <a class="links" href="privacy/PoliticaPrivacidad.html">Política de Privacidad</a> .
+	</p></div>
 
 </div>
 </div>
