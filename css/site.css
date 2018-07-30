@@ -56,10 +56,10 @@
   #toTopBtn{
     display: none;
     position: fixed;
-    bottom: 20px;
-    right: 30px;
+    bottom: 2%;
+    right: 2%;
     z-index: 99;
-    font-size: 18px;
+    font-size: 20px;
     border: none;
     outline: none;
     background-color: #383838;
@@ -67,7 +67,9 @@
     opacity: .50;
     cursor: pointer;
     padding: 15px;
-    border-radius: 4px;
+    border-radius: 4px 4px 0 0;
+    width: 50px;
+    height: 40px;
   }
 	
 
