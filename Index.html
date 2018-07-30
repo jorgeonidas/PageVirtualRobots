@@ -33,8 +33,22 @@
 				$("#footer-p").addClass("text-center");
 			}
 
-
 		});
+		//scroll function
+		window.onscroll = function () { scrollToRenderBtn() };
+
+		function scrollToRenderBtn() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				document.getElementById("toTopBtn").style.display = "block";
+			} else {
+				document.getElementById("toTopBtn").style.display = "none";
+			}
+		}
+
+		function topTop() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
 	</script>
 
 	<link rel="stylesheet" href="css/site.css">
@@ -132,6 +146,11 @@
 			<hr class="featurette-divider">
 		</div>
 		<!-- /divNoticias -->
+		<div>
+			<button id="toTopBtn" onclick="topTop()">
+				<i class="fa fa-angle-up"></i>
+			</button>
+		</div>
 		<footer class=" footer  ">
 			<div class="container ">
 

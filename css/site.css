@@ -51,7 +51,24 @@
 	}
 	.links:hover {
 		color:#f9a01b;
-	}
+  }
+  
+  #toTopBtn{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #383838;
+    color: white;
+    opacity: .50;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
 	
 
 
