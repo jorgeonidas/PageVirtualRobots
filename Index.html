@@ -12,6 +12,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="cookiebar-plugin/jquery.cookiebar.css" />
+	<script type="text/javascript" src="cookiebar-plugin/jquery.cookiebar.js"></script>
 	<script>
 		$(document).ready(function () {
 			$('.carousel').carousel({
@@ -32,7 +34,7 @@
 				$("#navBarBrand").attr("src", "images/LogoGrisMovil.png");
 				$("#footer-p").addClass("text-center");
 			}
-
+			$.cookieBar({});
 		});
 		//scroll function
 		window.onscroll = function () { scrollToRenderBtn() };
