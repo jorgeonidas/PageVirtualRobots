@@ -10,24 +10,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script>
- $( document ).ready(function() {
-$("#liInicio").hover();
-if ( $(window).width() > 739) {      
-$("#navBarBrand").attr("src", "../images/LogoGris.png" ); 
- //$("#footer").addClass("fixed-bottom "); 
-} 
-
-else {
-
-$("#footer").removeClass("fixed-bottom ");
- $("#navBarBrand").attr("src", "../images/LogoGrisMovil.png" ); 
-  //Add your javascript for small screens here 
-}
-
-
-});
-
+  <script type="text/javascript" src="../js/jquery.cookiebar.js"></script>
+	<script type="text/javascript" src="../js/site.js"></script>
 
 
 
@@ -406,7 +390,9 @@ $("#footer").removeClass("fixed-bottom ");
 					</li>	
 				</ol>
 		</ul>
-		
+		<button style="padding: 0" id="toTopBtn" onclick="topTop()">
+				<i style="vertical-align: middle;font-size: 100%" class="fa fa-angle-up"></i>
+			</button>
 	</div>
 	<footer class=" footer  ">
 <div class="container " >
@@ -423,10 +409,14 @@ $("#footer").removeClass("fixed-bottom ");
 <div class="row">
 
 
-  <div class="offset-lg-2">
-	<p  style="font-size:1.0rem;"  class=" text-muted">© 2016 - 2018 Virtual Robot®. Biowiza S.A. Todos los derechos reservados. Costa Rica. 
-	Puedes revisar nuestros  <a class="links" href="#">Términos de Uso </a> y  <a class="links" href="PoliticaPrivacidad.html">Política de Privacidad</a> .
-	</p></div>
+ <div class="offset-lg-1">
+			<p id="footer-p" style="font-size:0.8rem;" class=" text-muted">© 2016 - 2018 Virtual Robot®. Biowiza S.A. Todos los derechos reservados. Costa Rica. Puedes revisar nuestros
+				<a class="links"
+				 href="../legal/TerminosUso.html">Términos de Uso </a> y
+				<a class="links" href="../legal/PoliticaPrivacidad.html">
+					Política de Privacidad</a> .
+			</p>
+		</div>
 
 </div>
 </div>

@@ -11,31 +11,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script>
-  $( document ).ready(function() {
-$("#liInicio").hover();
-if ( $(window).width() > 739) {      
-$("#navBarBrand").attr("src", "../images/LogoGris.png" ); 
- $("#footer").addClass("fixed-bottom "); 
-} 
-
-else {
-
-$("#footer").removeClass("fixed-bottom ");
- $("#navBarBrand").attr("src", "../images/LogoGrisMovil.png" ); 
-  //Add your javascript for small screens here 
-}
-
-
-});
- </script>
+  	<link rel="stylesheet" type="text/css" href="../css/jquery.cookiebar.css" />
+<script type="text/javascript" src="../js/jquery.cookiebar.js"></script>
+	<script type="text/javascript" src="../js/site.js"></script>
  <link rel="stylesheet" href="../css/site.css">
 
-
-
-
-
-  
 </head>
 <body>
 
@@ -46,8 +26,8 @@ $("#footer").removeClass("fixed-bottom ");
     <span class="navbar-toggler-icon"></span>
   </button>
    <!-- Brand/logo -->
-  <a class="navbar-brand mx-auto" href="#">
-	<img class="d-block" id="navBarBrand"  alt="Logo">
+  <a class="navbar-brand mx-auto"  href="#">
+	 <img class="d-block" id="navBarBrand"  alt="Logo"> 
   </a>
   
   <div class="collapse navbar-collapse" id="navbarToggler">
@@ -89,7 +69,9 @@ $("#footer").removeClass("fixed-bottom ");
 		</div><!-- /.col-lg-4 -->
 	</div><!-- /.row -->
 	
-
+<button style="padding: 0" id="toTopBtn" onclick="topTop()">
+				<i style="vertical-align: middle;font-size: 100%" class="fa fa-angle-up"></i>
+			</button>
 
 	</div> <!-- /divNoticias -->
 <footer id="footer" class=" footer fixed-bottom ">
@@ -105,13 +87,18 @@ $("#footer").removeClass("fixed-bottom ");
 		
 	</div>
 	<div class="row">
+		
 		<div class="offset-lg-1">
-			<p  style="font-size:0.8rem;"  class=" text-muted">© 2016 - 2018 Virtual Robot®. Biowiza S.A. Todos los derechos reservados. Costa Rica. 
-			Puedes revisar nuestros  <a class="links" href="../legal/TerminosUso.html">Términos de Uso </a> y  <a class="links" href="../legal/PoliticaPrivacidad.html">
-			Política de Privacidad</a> .
+			<p id="footer-p" style="font-size:0.8rem;" class=" text-muted">© 2016 - 2018 Virtual Robot®. Biowiza S.A. Todos los derechos reservados. Costa Rica. Puedes revisar nuestros
+				<a class="links"
+				 href="../legal/TerminosUso.html">Términos de Uso </a> y
+				<a class="links" href="../legal/PoliticaPrivacidad.html">
+					Política de Privacidad</a> .
 			</p>
 		</div>
 	</div>
+	
+	
 </div>
 </footer>
 

@@ -14,47 +14,10 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery.cookiebar.css" />
 	<script type="text/javascript" src="js/jquery.cookiebar.js"></script>
+	<script type="text/javascript" src="js/site.js"></script>
 	<link rel="stylesheet" href="css/site.css">
-	<script>
-		$(document).ready(function () {
-			$('.carousel').carousel({
-				interval: 3000
-			})
-
-			$("#liInicio").hover();
-			if ($(window).width() > 739) {
-				src = "images/logoWeb.png"
-				$("#footer").addClass("fixed-bottom ");
-				$("#navBarBrand").attr("src", "images/LogoGris.png");
-				$("#footer-p").removeClass("text-center");
-			}
-
-			else {
-
-				$("#footer").removeClass("fixed-bottom ");
-				$("#navBarBrand").attr("src", "images/LogoGrisMovil.png");
-				$("#footer-p").addClass("text-center");
-			}
-			$.cookieBar({});
-		});
-		//scroll function
-		window.onscroll = function () { scrollToRenderBtn() };
-
-		function scrollToRenderBtn() {
-			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-				document.getElementById("toTopBtn").style.display = "block";
-			} else {
-				document.getElementById("toTopBtn").style.display = "none";
-			}
-		}
-
-		function topTop() {
-			//document.body.scrollTop = 0;
-			//document.documentElement.scrollTop = 0;
-			$('html, body').animate({scrollTop:0},500);
-		}
-	</script>
-
+	
+	
 	
 
 
@@ -167,12 +130,13 @@
 			<!-- /.row -->
 
 			<hr class="featurette-divider">
+				<button style="padding: 0" id="toTopBtn" onclick="topTop()">
+				<i style="vertical-align: middle;font-size: 100%" class="fa fa-angle-up"></i>
+			</button>
 		</div>
 		<!-- /divNoticias -->
 
-			<button style="padding: 0" id="toTopBtn" onclick="topTop()">
-				<i style="vertical-align: middle;font-size: 100%" class="fa fa-angle-up"></i>
-			</button>
+		
 
 		<footer class=" footer  ">
 			<div class="container ">
