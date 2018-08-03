@@ -16,31 +16,26 @@
 	<script type="text/javascript" src="js/jquery.cookiebar.js"></script>
 	<script type="text/javascript" src="js/site.js"></script>
 	<link rel="stylesheet" href="css/site.css">
-	
-	
-	
+
+
+
 
 
 </head>
 
 <body>
-
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg sticky-top">
-
+<!--navbar-->
+	<nav class="navbar navbar-expand-lg sticky-top shadow-lg navbar-dark bg-dark">
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler"
 		 aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<!-- Brand/logo -->
-		<a class="navbar-brand mx-auto"  href="#">
+		<a class="navbar-brand mx-auto" href="#">
 			<img class="d-block" id="navBarBrand" alt="Logo">
-			
 		</a>
-		
-			
-		</ul>
-			
+
 		<div class="collapse navbar-collapse" id="navbarToggler">
 			<!-- Links -->
 			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -50,23 +45,33 @@
 				<li class="nav-item ">
 					<a class="nav-link" href="news/Noticias.html">Noticias</a>
 				</li>
-
 			</ul>
-			
-			
 		</div>
-		
-		<button class="navbar-toggler signIn" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class=""><i class="fa fa-user-o" aria-hidden="true"></i></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-  	
-  </div>
-		
-		
+
+		<button class="navbar-toggler signIn" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+		 aria-expanded="false" aria-label="Toggle navigation">
+			<span class="">
+				<i class="fa fa-user-o" aria-hidden="true"></i>
+			</span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarNav">
+
+		</div>
+
+		<div class="collapse navbar-collapse" id="navbarToggler">
+			<!-- Links -->
+			<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+				<li class="nav-item">
+					<a class="nav-link " href="#">Registro</a>
+				</li>
+			</ul>
+		</div>
+
+
 	</nav>
 
-
+<!--*Carousel*-->
 	<main role="main">
 
 		<div id="carouseOllie" class="carousel slide" data-ride="carousel">
@@ -102,11 +107,12 @@
 
 			<div class="row">
 				<div class="col col-lg-2">
-					<h1> Noticias </h1> 
+					<h1> Noticias </h1>
 				</div>
-				
+
 				<div class="col  col-lg-2 mt-3 pl-0" style="font-size:1.2rem">
-					<p> <a href="news/Noticias.html" class="links"> Ver más > </a>
+					<p>
+						<a href="news/Noticias.html" class="links"> Ver más > </a>
 				</div>
 
 			</div>
@@ -132,13 +138,13 @@
 			<!-- /.row -->
 
 			<hr class="featurette-divider">
-				<button style="padding: 0" id="toTopBtn" onclick="topTop()">
+			<button style="padding: 0" id="toTopBtn" onclick="topTop()">
 				<i style="vertical-align: middle;font-size: 100%" class="fa fa-angle-up"></i>
 			</button>
 		</div>
 		<!-- /divNoticias -->
 
-		
+
 
 		<footer class=" footer  ">
 			<div class="container ">
@@ -163,8 +169,7 @@
 
 					<div class="offset-lg-1">
 						<p id="footer-p" style="font-size:0.8rem;" class=" text-muted">© 2016 - 2018 Virtual Robot®. Biowiza S.A. Todos los derechos reservados. Costa Rica. Puedes revisar nuestros
-							<a class="links"
-							 href="legal/TerminosUso.html">Términos de Uso </a> y
+							<a class="links" href="legal/TerminosUso.html">Términos de Uso </a> y
 							<a class="links" href="legal/PoliticaPrivacidad.html">
 								Política de Privacidad</a> .
 						</p>
@@ -183,5 +188,3 @@
 </body>
 
 </html>
-
-
