@@ -11,10 +11,13 @@
 			}
 
 			else {
-
 				$("#footer").removeClass("fixed-bottom ");
 				$("#navBarBrand").attr("src", "http://virtualrobot-website.s3-website.us-east-2.amazonaws.com/images/LogoGrisMovil.png");
 				$("#footer-p").addClass("text-center");
+				//movil slider images
+				$("#firstSlide").attr("src", "images/Movil/Slider_OllieCharacters.png");
+				$("#secondSlide").attr("src", "images/Movil/MovilSlider_OllieKeyboardAd.jpg");
+				$("#thirdSlide").attr("src", "images/Movil/SliderOlliePersonajesFutbolin.png");
 			}
 			$.cookieBar({});
 		});
