@@ -21,23 +21,25 @@
 
 <body>
 	<!--Custom sidenav-->
-	<div id='menu-contents' class="navbar" style='display: none'>
-		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+	<nav id='menu-contents' class="navbar" style='display: none'>
+		<ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
 			<li class="nav-item " id="liInicio">
 				<a class="nav-link " href="#">Inicio</a>
 			</li>
 			<li class="nav-item ">
-				<a class="nav-link" href="news/Noticias.html">Noticias</a>
+				<a class="nav-link" href="#">Noticias</a>
 			</li>
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-				 aria-expanded="false">
+				 aria-expanded="false" onclick="toggleProducts()">
 					Products
 				</a>
-				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="#">Ollie Keyboard</a>
-				</div>
 			</li>
+			<ul class="nav navbar-nav" id="productList">
+				<li  class="nav-item" >
+					<a class="nav-link " href="#">Ollie Tick Tac Toe</a>
+				</li>
+			</ul>
 			<li class="nav-item">
 				<a class="nav-link" id="registro-btn" href="#">
 					<i class="fa fa-user-o navbar-toggler border-0" style="padding-left: 0%" aria-hidden="true">
@@ -46,7 +48,7 @@
 				</a>
 			</li>
 		</ul>
-	</div>
+	</nav>
 <!--navbar-->
 	<nav class="navbar navbar-expand-lg sticky-top shadow-lg navbar-dark bg-dark">
 		
@@ -81,7 +83,7 @@
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="#">Ollie Keyboard</a>
-					</div>
+					  </div>
 				</li>
 			</ul>
 

@@ -2,7 +2,6 @@ $(document).ready(function () {
 	$('.carousel').carousel({
 		interval: 3000
 	})
-
 	$("#liInicio").hover();
 	if ($(window).width() > 739) {
 		$("#footer").addClass("fixed-bottom ");
@@ -19,7 +18,7 @@ $(document).ready(function () {
 		$("#secondSlide").attr("src", "images/Movil/MovilSlider_OllieKeyboardAd.jpg");
 		$("#thirdSlide").attr("src", "images/Movil/SliderOlliePersonajesFutbolin.png");
 	}
-	$.cookieBar({});
+    $.cookieBar({});
 });
 //scroll function
 window.onscroll = function () { scrollToRenderBtn() };
@@ -40,6 +39,17 @@ function topTop() {
 	//document.documentElement.scrollTop = 0;
 	$('html, body').animate({ scrollTop: 0 }, 500);
 }
+
+function toggleProducts(){
+    console.log("clic prod");
+    if(!$('#productList').is(':visible')){
+        $("#productList").show();  
+    }else{
+        $("#productList").hide();  
+    }
+     
+}
+
 //Sidemenu algoritms
 (() => {
     
