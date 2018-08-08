@@ -87,14 +87,15 @@
   }
   /*sidemenu*/
   .menu-container {
-    position: absolute;
-    top: 60px;
+    position: fixed;
+    top: 40px;
     left: 0;
     z-index: 900;
-    background: rgba(0,0,0,0.5);
+    background: transparent;
     width: 100vw;
-    height: calc(100% - 45px);
-    min-height: calc(100vh - 45px);
+    /*height: calc(100% - 45px);
+    min-height: calc(100vh - 45px);*/
+    height: 100%;
     transition: all 500ms;
 }
 
@@ -105,11 +106,63 @@
   z-index: 1000;
 }
 
-#productList{
-  display: none;
+.customSidenav{
+  padding: 0;
 }
 
-   
+.customUlSidenav{
+  background-color: #67696b;
+  padding-top: 1rem;
+}
+
+#productList{
+  display: none;
+  background-color: #999b9e;
+}
+
+/*breack points*/
+@media (min-width: 992px) {
+  .navbar {
+    padding: 1vh 15vw 1vh 10vw;
+  }
+
+}
+
+@media (max-width: 992px){
+
+  .navbar-nav>li>a, #liInicio>a 
+  {
+    text-decoration: none;
+    font-weight:bold;
+    color: #ffffff;
+    border-bottom: none;
+    font-size: 1.2rem;
+  }
+  
+  .navbar-nav>li>a:hover, #liInicio>a:hover 
+  {
+    text-decoration: none;
+    font-weight:bold;
+    color: #f9a01b;
+    border-bottom: none;
+
+  }
+
+  .navbar-nav>li{
+    line-height: 3rem;
+    padding-left: 4vw;
+  }
+
+  .navbar-nav>li:hover{
+    background-color: #ffffff;
+  }
+
+  
+
+  #registro-btn{
+    font-weight: bold;
+  }
+}
    
    
    
