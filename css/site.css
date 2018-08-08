@@ -99,6 +99,26 @@
     transition: all 500ms;
 }
 
+.account-info{
+  width: 100%;
+  display: block; 
+}
+
+.accoutn-data-wrapper{
+  color: #ffffff;
+  line-height: 3rem;
+  padding-right: 0;
+  padding-left: 5vw;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+
+
+.incon-wrapper{
+  padding: 0;
+}
+
 .menu {
   width: 50%;
   min-width: 300px;
@@ -120,11 +140,21 @@
   background-color: #999b9e;
 }
 
-.icon-p1 {
-  width: 14px;
-  height: 14px;
-  background-image: url("images/GooglePlayOllieKeyboardIcon.png");
-  background-position: center center;
+#account-info{
+  display: none;
+}
+
+.icon-img {
+  width :40px; 
+  height:40px; 
+  margin-right: 10px;
+}
+
+.arrow-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /*breack points*/

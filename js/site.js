@@ -50,6 +50,19 @@ function toggleProducts(){
      
 }
 
+function login(){
+    console.log("clic acc");
+    if(!$('#account-info').is(':visible')){
+        $("#account-info").show();
+        $("#login").hide();  
+    }
+}
+
+function logout(){
+    $("#account-info").hide();
+    $("#login").show();  
+}
+
 //Sidemenu algoritms
 (() => {
     

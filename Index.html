@@ -37,21 +37,34 @@
 			</li>
 			<ul class="nav navbar-nav" id="productList">
 				<li  class="nav-item" >
-					<!--<i class="icon-p1"></i>-->
-					
-					<a class="nav-link " href="#"> <img width="40px" height="40px" style="padding-right: 2%;"  src="images/GooglePlayOllieKeyboardIcon.png" alt="">Ollie Keyboard</a>
+					<a class="nav-link " href="#"> <img class="icon-img"  src="images/GooglePlayOllieKeyboardIcon.png" alt="">Ollie Keyboard</a>
 				</li>
 			</ul>
 		</ul>
-		<ul class="nav navbar-nav">
+		<ul id="login" class="nav navbar-nav">
 			<li class="nav-item">
-				<a class="nav-link" id="registro-btn" href="#">
+				<a class="nav-link" id="registro-btn" href="#" onclick="login()">
 					<i class="fa fa-user-o navbar-toggler border-0" style="padding-left: 0%" aria-hidden="true">
 					</i>
-					Registro
+					Ingresar
 				</a>
 			</li>
 		</ul>
+		<div id="account-info">
+			<div class="row">
+				<div class="col-sm-7">
+					<div class="row">
+						<div class="col-sm-12 accoutn-data-wrapper"><img class="icon-img"  src="images/user.png" alt="">Ollie</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12 accoutn-data-wrapper"><img class="icon-img"  src="images/Eolas.png" alt="">999999</div>
+					</div>
+				</div>
+				<div class="col-4 arrow-wrapper">
+					<a href="#" onclick="logout()"><img src="images/arrow.png" style="width: 4rem; height: 4rem;" alt=""></a>
+				</div>
+			</div>
+		</div>
 	</nav>
 <!--navbar-->
 	<nav class="navbar navbar-expand-lg sticky-top shadow-lg navbar-dark bg-dark">
