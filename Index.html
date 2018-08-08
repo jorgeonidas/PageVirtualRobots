@@ -17,20 +17,49 @@
 	<script type="text/javascript" src="js/site.js"></script>
 	<link rel="stylesheet" href="css/site.css">
 
-
-
-
-
 </head>
 
 <body>
+	<!--Custom sidenav-->
+	<div id='menu-contents' class="navbar" style='display: none'>
+		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+			<li class="nav-item " id="liInicio">
+				<a class="nav-link " href="#">Inicio</a>
+			</li>
+			<li class="nav-item ">
+				<a class="nav-link" href="news/Noticias.html">Noticias</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+				 aria-expanded="false">
+					Products
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#">Ollie Keyboard</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="registro-btn" href="#">
+					<i class="fa fa-user-o navbar-toggler border-0" style="padding-left: 0%" aria-hidden="true">
+					</i>
+					Registro
+				</a>
+			</li>
+		</ul>
+	</div>
 <!--navbar-->
 	<nav class="navbar navbar-expand-lg sticky-top shadow-lg navbar-dark bg-dark">
-
+		
+		<button id="sidebar-target" class="navbar-toggler" type="button" aria-controls="navbarToggler"
+		 aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<!--
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler"
 		 aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
+		-->
 		<!-- Brand/logo -->
 		<a class="navbar-brand mx-auto" href="#">
 			<img class="d-block" id="navBarBrand" alt="Logo">
@@ -45,29 +74,33 @@
 				<li class="nav-item ">
 					<a class="nav-link" href="news/Noticias.html">Noticias</a>
 				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+					 aria-expanded="false">
+						Products
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">Ollie Keyboard</a>
+					</div>
+				</li>
 			</ul>
-		</div>
 
-		<button class="navbar-toggler signIn" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-		 aria-expanded="false" aria-label="Toggle navigation">
-			<span class="">
-				<i class="fa fa-user-o" aria-hidden="true"></i>
-			</span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navbarNav">
-
-		</div>
-
-		<div class="collapse navbar-collapse" id="navbarToggler">
-			<!-- Links -->
 			<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
 				<li class="nav-item">
-					<a class="nav-link" id="registro-btn" href="#">Registro</a>
+					<a class="nav-link" id="registro-btn" href="#">
+						<i class="fa fa-user-o navbar-toggler border-0" style="padding-left: 0%" aria-hidden="true">			
+						</i>
+						Registro
+					</a>
 				</li>
 			</ul>
 		</div>
 
+		<button class="navbar-toggler signIn" type="button">
+			<span class="">
+				<i class="fa fa-user-o" aria-hidden="true"></i>
+			</span>
+		</button>
 
 	</nav>
 
@@ -115,8 +148,6 @@
 				</div>
 
 			</div>
-
-
 
 			<!-- 3 noticias por row  -->
 			<div class="row">
@@ -179,10 +210,6 @@
 		</footer>
 
 	</main>
-
-
-
-
 
 </body>
 
