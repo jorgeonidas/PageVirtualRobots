@@ -120,6 +120,13 @@
   background-color: #999b9e;
 }
 
+.icon-p1 {
+  width: 14px;
+  height: 14px;
+  background-image: url("images/GooglePlayOllieKeyboardIcon.png");
+  background-position: center center;
+}
+
 /*breack points*/
 @media (min-width: 992px) {
   .navbar {
@@ -141,7 +148,6 @@
     color: #ffffff;
     border-bottom: none;
     font-size: 1.2rem;
-    width: 100%;
     
   }
   
