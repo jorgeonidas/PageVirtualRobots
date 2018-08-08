@@ -130,6 +130,10 @@
 
 @media (max-width: 992px){
 
+  .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 4vw;
+  }
   .navbar-nav>li>a, #liInicio>a 
   {
     text-decoration: none;
@@ -137,6 +141,8 @@
     color: #ffffff;
     border-bottom: none;
     font-size: 1.2rem;
+    width: 100%;
+    
   }
   
   .navbar-nav>li>a:hover, #liInicio>a:hover 
@@ -150,7 +156,7 @@
 
   .navbar-nav>li{
     line-height: 3rem;
-    padding-left: 4vw;
+    padding: 0;
   }
 
   .navbar-nav>li:hover{
