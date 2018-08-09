@@ -24,13 +24,13 @@
 	<nav id='menu-contents' class="navbar customSidenav" style='display: none'>
 		<ul class="nav navbar-nav mr-auto mt-2 mt-lg-0 customUlSidenav">
 			<li class="nav-item " id="liInicio">
-				<a class="nav-link " href="#">Inicio</a>
+				<a class="nav-link " key="home" href="#">Inicio</a>
 			</li>
 			<li class="nav-item ">
-				<a class="nav-link" href="#">Noticias</a>
+				<a class="nav-link" key="news" href="#">Noticias</a>
 			</li>
 			<li class="nav-item dropdown">
-				<a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+				<a class="nav-link " key="products" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
 				 aria-expanded="false" onclick="toggleProducts()">
 					Productos <img id="drop-arrow" src="images/down-arrow.svg" alt="">
 				</a>
@@ -43,7 +43,7 @@
 		</ul>
 		<ul id="login" class="nav navbar-nav">
 			<li class="nav-item">
-				<a class="nav-link" id="registro-btn" href="#" onclick="login()">
+				<a class="nav-link" key="sign-in" id="registro-btn" href="#" onclick="login()">
 					<i class="fa fa-user-o navbar-toggler border-0" style="padding-left: 0%" aria-hidden="true">
 					</i>
 					Ingresar
@@ -90,13 +90,13 @@
 			<!-- Links -->
 			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 				<li class="nav-item " id="liInicio">
-					<a class="nav-link " href="#">Inicio</a>
+					<a class="nav-link " key="home" href="#">Inicio</a>
 				</li>
 				<li class="nav-item ">
-					<a class="nav-link" href="news/Noticias.html">Noticias</a>
+					<a class="nav-link" key="news" href="news/Noticias.html">Noticias</a>
 				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+					<a class="nav-link dropdown-toggle" key="products" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
 					 aria-expanded="false">
 						Products
 					</a>
@@ -108,7 +108,7 @@
 
 			<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
 				<li class="nav-item">
-					<a class="nav-link" id="registro-btn" href="#">
+					<a class="nav-link" key="sign-in" id="registro-btn" href="#">
 						<i class="fa fa-user-o navbar-toggler border-0" style="padding-left: 0%" aria-hidden="true">			
 						</i>
 						Registro
@@ -160,10 +160,10 @@
 		
 			<div id="row-noticias" class="row">
 				<div class="col col-lg-2" style="padding: 0">
-					<h1 style="width: 100%;"> Noticias </h1>
+					<h1 key="news" style="width: 100%;"> Noticias </h1>
 				</div>
 				<div id="link-vermas" class="col  col-lg-2  mt-3 pl-0" style="font-size:1.2rem">
-					<a style="width: 100%;" href="news/Noticias.html" class="links"> Ver más > </a>
+					<a key="see-more" style="width: 100%;" href="news/Noticias.html" class="links"> Ver más > </a>
 				</div>
 			</div>
 
@@ -175,7 +175,7 @@
 						<h3 class="card-title">Ollie Keyboard</h3>
 						<p class="card-text">Ya puedes llevar a Ollie contigo a todos lados!</p>
 						<p class="float-right">
-							<a class="btn btn-secondary" href="#" role="button">Leer más »</a>
+							<a class="btn btn-secondary" key="read-more" href="#" role="button">Leer más »</a>
 						</p>
 					</div>
 				</div>
@@ -214,9 +214,9 @@
 
 
 					<div class="offset-lg-1">
-						<p id="footer-p" style="font-size:0.8rem;" class=" text-muted">© 2016 - 2018 Virtual Robot®. Biowiza S.A. Todos los derechos reservados. Costa Rica. Puedes revisar nuestros
-							<a class="links" href="legal/TerminosUso.html">Términos de Uso </a> y
-							<a class="links" href="legal/PoliticaPrivacidad.html">
+						<p id="footer-p" key="copyright" style="font-size:0.8rem;" class=" text-muted">© 2016 - 2018 Virtual Robot®. Biowiza S.A. Todos los derechos reservados. Costa Rica. Puedes revisar nuestros
+							<a class="links" key="legal-terms" href="legal/TerminosUso.html">Términos de Uso </a> y
+							<a class="links" key="legal-policy" href="legal/PoliticaPrivacidad.html">
 								Política de Privacidad</a> .
 						</p>
 					</div>
