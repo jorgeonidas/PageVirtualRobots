@@ -13,6 +13,7 @@ aLangKeys['es']['see-more']="Ver más >";
 aLangKeys['es']['read-more']="Leer más »";
 aLangKeys['es']['copyright']="© 2016 - 2018 Virtual Robot®. Biowiza S.A. Todos los derechos reservados. Costa Rica. Puedes revisar nuestros";
 aLangKeys['es']['legal-terms']="Términos de Uso";
+aLangKeys['es']['and']="y";
 aLangKeys['es']['legal-policy']="Política de Privacidad";
 
 aLangKeys['en']['home']="Home";
@@ -25,6 +26,7 @@ aLangKeys['en']['see-more']="See More >";
 aLangKeys['en']['read-more']="Read More »";
 aLangKeys['en']['copyright']="© 2016 - 2018 Virtual Robot®. Biowiza S.A. All Rights Reserved. Costa Rica. You can check our";
 aLangKeys['en']['legal-terms']="Terms of Use";
+aLangKeys['en']['and']="and";
 aLangKeys['en']['legal-policy']="Privacy Policy";
 
 $(document).ready(function () {
