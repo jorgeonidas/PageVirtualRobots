@@ -30,9 +30,9 @@
 				<a class="nav-link" href="#">Noticias</a>
 			</li>
 			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+				<a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
 				 aria-expanded="false" onclick="toggleProducts()">
-					Productos
+					Productos <img src="images/down-arrow.svg" style="width: 2vw; height: 2vh; color: #ffffff" alt="">
 				</a>
 			</li>
 			<ul class="nav navbar-nav" id="productList">
@@ -51,17 +51,19 @@
 			</li>
 		</ul>
 		<div id="account-info">
-			<div class="row">
-				<div class="col-sm-7">
+			<div class="row" style="padding-left: 3vw">
+				<div class="col" >
 					<div class="row">
-						<div class="col-sm-12 accoutn-data-wrapper"><img class="icon-img"  src="images/user.png" alt="">Ollie</div>
+						<div class="col accoutn-data-wrapper"><img class="icon-img"  src="images/user.png" alt="">Ollie</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-12 accoutn-data-wrapper"><img class="icon-img"  src="images/Eolas.png" alt="">999999</div>
+						<div class="col accoutn-data-wrapper"><img class="icon-img"  src="images/Eolas.png" alt="">999999</div>
 					</div>
 				</div>
-				<div class="col-4 arrow-wrapper">
-					<a href="#" onclick="logout()"><img src="images/arrow.png" style="width: 4rem; height: 4rem;" alt=""></a>
+				<div class="col" style="padding: 0; height: 6rem;">
+					<a href="#" class="arrow-wrapper" onclick="logout()" style="width: 100%; height: 100%">
+						<img src="images/left-arrow.svg" class="flip-arrow" style="width: 30%; height: 30%;" alt="">
+					</a>
 				</div>
 			</div>
 		</div>
