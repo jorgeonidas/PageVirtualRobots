@@ -42,11 +42,15 @@ function topTop() {
 
 function toggleProducts(){
     console.log("clic prod");
-    if(!$('#productList').is(':visible')){
-        $("#productList").show();  
+    if( !$('#productList').is(':visible') ){
+        $("#productList").show(); 
     }else{
-        $("#productList").hide();  
+        $("#productList").hide();
+
     }
+    console.log("flipping arrow");
+    
+    $("#drop-arrow").toggleClass('flip-dropdown');
      
 }
 
