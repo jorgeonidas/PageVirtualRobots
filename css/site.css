@@ -221,13 +221,19 @@
   }
 
   #row-noticias{
-    padding-left: 15px;
+    /*padding-left: 15px;*/
   }
   #row-noticias>div>a{
-    padding-left: 10px;
+   /* padding-left: 10px;*/
   }
   
 
+}
+
+@media (min-width: 320px) {
+  #row-noticias>div.col-5{
+    max-width: 50%
+  }
 }
    
    
