@@ -231,11 +231,22 @@
 }
 
 @media (min-width: 320px) {
-  #row-noticias>div.col-5{
+  #row-noticias>div.col-2{
     max-width: 50%
   }
 }
-   
+/*gama baja*/
+@media (min-width: 240px) {
+  #row-noticias>div.col-2{
+    max-width: 50%;
+  }
+  #row-noticias>div.col-2>h1{
+    font-size: 1.8rem;
+  }
+  #link-vermas{
+    max-width: 50%;
+  }
+}
    
    
   
