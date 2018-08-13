@@ -35,11 +35,14 @@
 	  font-weight:normal;
 	  border-bottom: 5px solid #f9a01b;
   }
-   
+  
+  #link-vermas{
+    padding-top: 0.3rem;
+    padding-left: 0.5rem;
+  }
+
    #divNoticias {
-	margin-top:15px;
-	
-   
+	  margin-top:15px; 
   }
 
   .navbar-nav>li>a
@@ -219,14 +222,6 @@
   #registro-btn{
     font-weight: bold;
   }
-
-  #row-noticias{
-    /*padding-left: 15px;*/
-  }
-  #row-noticias>div>a{
-   /* padding-left: 10px;*/
-  }
-  
 
 }
 
