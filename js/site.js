@@ -1,5 +1,6 @@
 $(document).ready(function () {
-        
+    
+
     /*2d array of languages*/
         var aLangKeys = new Array();
         aLangKeys['en'] = new Array();
@@ -57,39 +58,90 @@ $(document).ready(function () {
     
             });
         }
-    );
 
-    /*Testeando traduccion */
-    /*$('.lang').click(function () {
-        var lang = $(this).attr('id'); // obtain language id
-        // translate all translatable elements
-        $('.tr').each(function (i) {
-            $(this).text(aLangKeys[lang][$(this).attr('key')]);
-        });
-    });*/
-        
+    );
 
 	$('.carousel').carousel({
 		interval: 3000
 	})
-	$("#liInicio").hover();
+    $("#liInicio").hover();
+    
+    var logoSrc;
+
 	if ($(window).width() > 739) {
 		$("#footer").addClass("fixed-bottom ");
-		$("#navBarBrand").attr("src", "http://virtualrobot-website.s3-website.us-east-2.amazonaws.com/images/LogoGris.png");
+        $("#navBarBrand").attr("src", "http://virtualrobot-website.s3-website.us-east-2.amazonaws.com/images/LogoGris.png");
+        logoSrc ="http://virtualrobot-website.s3-website.us-east-2.amazonaws.com/images/LogoGris.png";
 		$("#footer-p").removeClass("text-center");
 	}
 
 	else {
 		$("#footer").removeClass("fixed-bottom ");
-		$("#navBarBrand").attr("src", "http://virtualrobot-website.s3-website.us-east-2.amazonaws.com/images/LogoGrisMovil.png");
+        $("#navBarBrand").attr("src", "http://virtualrobot-website.s3-website.us-east-2.amazonaws.com/images/LogoGrisMovil.png");
+        logoSrc = "http://virtualrobot-website.s3-website.us-east-2.amazonaws.com/images/LogoGrisMovil.png"
 		$("#footer-p").addClass("text-center");
 		//movil slider images
 		$("#firstSlide").attr("src", "images/Movil/Slider_OllieCharacters.png");
 		$("#secondSlide").attr("src", "images/Movil/MovilSlider_OllieKeyboardAd.jpg");
 		$("#thirdSlide").attr("src", "images/Movil/SliderOlliePersonajesFutbolin.png");
-	}
+    }
+    appendMainNav(logoSrc);
     $.cookieBar({});
 });
+
+//para concatenar nav
+function appendMainNav(logo){
+    const htmlNav = `<button id="sidebar-target" class="navbar-toggler" type="button" aria-controls="navbarToggler"
+        aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+       </button>
+  
+       <!-- Brand/logo -->
+       <a class="navbar-brand mx-auto" href="#">
+           <img class="d-block" id="navBarBrand" src="`+logo+`" alt="Logo">
+       </a>
+
+       <div class="collapse navbar-collapse" id="navbarToggler">
+           <!-- Links -->
+           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+               <li class="nav-item " id="liInicio">
+                   <a class="nav-link tr" key="home"  href="#">Inicio</a>
+               </li>
+               <li class="nav-item ">
+                   <a class="nav-link tr" key="news"  href="news/Noticias.html">Noticias</a>
+               </li>
+               <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle tr" key="products" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                       Productos
+                   </a>
+                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                       <a class="dropdown-item" href="#">Ollie Keyboard</a>
+                     </div>
+               </li>
+           </ul>
+
+           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+               <li class="nav-item">
+                   <a class="nav-link tr" key="sign-in" id="registro-btn" href="#">
+                       <i class="fa fa-user-o navbar-toggler border-0" style="padding-left: 0%" aria-hidden="true">			
+                       </i>
+                       Registro
+                   </a>
+               </li>
+           </ul>
+       </div>
+
+       <button class="navbar-toggler signIn" type="button">
+           <span class="">
+               <i class="fa fa-user-o" aria-hidden="true"></i>
+           </span>
+       </button>`;
+
+    $("#main-nav").append(htmlNav);
+}
+
+
 //scroll function
 window.onscroll = function () { scrollToRenderBtn() };
 
