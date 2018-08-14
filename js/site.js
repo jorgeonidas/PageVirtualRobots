@@ -146,9 +146,9 @@ function appendMainNav(logo){
                 <a class="nav-link tr" key="news" href="#">Noticias</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link tr" key="products" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                <a class="nav-link" key="products" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false" onclick="toggleProducts()">
-                    Productos <img id="drop-arrow" src="images/down-arrow.svg" alt="">
+                <p style="margin: 0 ; display: inline" class="tr">Productos</p> <img id="drop-arrow" src="images/down-arrow.svg" alt="">
                 </a>
             </li>
             <ul class="nav navbar-nav" id="productList">
@@ -185,7 +185,7 @@ function appendMainNav(logo){
         </div>`;
 
     $("#main-nav").append(htmlNav);
-    //$("#menu-contents").append(customSideMenuHtml);
+    $("#menu-contents").append(customSideMenuHtml);
 }
 
 
