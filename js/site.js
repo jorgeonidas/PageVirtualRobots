@@ -89,6 +89,7 @@ $(document).ready(function () {
     $.cookieBar({});
 });
 
+
 //para concatenar nav
 function appendMainNav(logo){
     const htmlNav = `<button id="sidebar-target" class="navbar-toggler" type="button" aria-controls="navbarToggler"
@@ -137,7 +138,7 @@ function appendMainNav(logo){
                <i class="fa fa-user-o" aria-hidden="true"></i>
            </span>
        </button>`;
-
+    
     const customSideMenuHtml = `<ul class="nav navbar-nav mr-auto mt-2 mt-lg-0 customUlSidenav">
             <li class="nav-item " id="liInicio">
                 <a class="nav-link tr" key="home" href="#">Inicio</a>
@@ -148,12 +149,12 @@ function appendMainNav(logo){
             <li class="nav-item dropdown">
                 <a class="nav-link" key="products" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false" onclick="toggleProducts()">
-                <p style="margin: 0 ; display: inline" class="tr">Productos</p> <img id="drop-arrow" src="images/down-arrow.svg" alt="">
+                <p style="margin: 0 ; display: inline" class="tr">Productos</p> <img id="drop-arrow" src="https://gdurl.com/9-UM" alt="">
                 </a>
             </li>
             <ul class="nav navbar-nav" id="productList">
                 <li  class="nav-item" >
-                    <a class="nav-link " href="#"> <img class="icon-img"  src="images/GooglePlayOllieKeyboardIcon.png" alt="">Ollie Keyboard</a>
+                    <a class="nav-link " href="#"> <img id="ollie-kb-icon" class="icon-img"  src="https://gdurl.com/Drb8" alt="">Ollie Keyboard</a>
                 </li>
             </ul>
         </ul>
@@ -170,15 +171,15 @@ function appendMainNav(logo){
             <div class="row" style="padding-left: 3vw">
                 <div class="col" >
                     <div class="row">
-                        <div class="col accoutn-data-wrapper"><img class="icon-img"  src="images/user.png" alt="">Ollie</div>
+                        <div class="col accoutn-data-wrapper"><img class="icon-img"  src="https://gdurl.com/ZgNV" alt="">Ollie</div>
                     </div>
                     <div class="row">
-                        <div class="col accoutn-data-wrapper"><img class="icon-img"  src="images/Eolas.png" alt="">999999</div>
+                        <div class="col accoutn-data-wrapper"><img class="icon-img"  src="https://gdurl.com/5km0" alt="">999999</div>
                     </div>
                 </div>
                 <div class="col" style="padding: 0; height: 6rem;">
                     <a href="#" class="arrow-wrapper" onclick="logout()" style="width: 100%; height: 100%">
-                        <img src="images/left-arrow.svg" class="flip-arrow" style="width: 30%; height: 30%;" alt="">
+                        <img src="https://gdurl.com/QFzVf" class="flip-arrow" style="width: 30%; height: 30%;" alt="">
                     </a>
                 </div>
             </div>
@@ -187,7 +188,6 @@ function appendMainNav(logo){
     $("#main-nav").append(htmlNav);
     $("#menu-contents").append(customSideMenuHtml);
 }
-
 
 //scroll function
 window.onscroll = function () { scrollToRenderBtn() };
