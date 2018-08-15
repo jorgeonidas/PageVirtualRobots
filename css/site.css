@@ -13,14 +13,26 @@
 .w400 {
   font-weight: 400;
 }
-/*
-#row-noticias>div>h1{
-  font-size: 2.3rem;
-}*/
+
+#main-nav{
+  font-size: 1rem;
+  height: 60px;
+}
+
+#sidebar-target{
+  font-size: 20px;
+  border-radius: 4px;
+  padding: 4px 12px;
+}
 
   li.nav-item{
     padding-left: 5px;
     padding-right: 5px;
+  }
+
+  li.nav-item>a, #liInicio>a{
+    font-size: 16px;
+    font-weight:bold;
   }
   
   #registro-btn{
@@ -45,10 +57,6 @@
 	  margin-top:15px; 
   }
 
-  .navbar-nav>li>a
-  {
-    font-weight:bold;
-  }
    
 	.list-group-item {
     float: left;
@@ -123,7 +131,7 @@
   line-height: 3rem;
   padding-right: 0;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 4vw;
 }
 
 .flip-arrow{
@@ -190,6 +198,8 @@
   .navbar-nav .nav-link {
     padding-right: 0;
     padding-left: 4vw;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
   }
   .navbar-nav>li>a, #liInicio>a 
   {
@@ -197,8 +207,8 @@
     font-weight:bold;
     color: #ffffff;
     border-bottom: none;
-    font-size: 1.2rem;
-    
+    font-size: 4vw;
+    line-height: 5vh;
   }
   
   .navbar-nav>li>a:hover, #liInicio>a:hover 

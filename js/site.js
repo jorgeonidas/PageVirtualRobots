@@ -86,7 +86,7 @@ $(document).ready(function () {
 		$("#thirdSlide").attr("src", "images/Movil/SliderOlliePersonajesFutbolin.png");
     }
     appendMainNav(logoSrc);
-    $.cookieBar({});
+    //$.cookieBar({});
 });
 
 
@@ -133,7 +133,7 @@ function appendMainNav(logo){
            </ul>
        </div>
 
-       <button class="navbar-toggler signIn" type="button">
+       <button style="font-size: 20px" class="navbar-toggler signIn" type="button">
            <span class="">
                <i class="fa fa-user-o" aria-hidden="true"></i>
            </span>
