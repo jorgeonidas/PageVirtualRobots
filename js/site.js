@@ -1,5 +1,39 @@
 $(document).ready(function () {
-    
+    var inicioUrl ="#" ;//default uris
+    var noticiasUrl = "news/Noticias.html";//default uris
+    //por si acaso 
+    //var termsUri ="legal/TerminosUso.html";
+    //var policyUri ="legal/PoliticaPrivacidad.html"
+    var currLocation = window.location.href;
+    console.log(currLocation);
+
+    var pageName = getPageName(currLocation);
+    console.log( pageName );
+    //sobrescribimos las uris dependiendo de la pagina
+    switch (pageName) {
+        case "Noticias.html":
+            console.log("en noticias");
+                var inicioUrl ="../index.html" ;//default uris
+                var noticiasUrl = "#";//default uris
+                //por si acaso 
+                //var termsUri ="../legal/TerminosUso.html";
+                //var policyUri ="../legal/PoliticaPrivacidad.html"
+            break;
+        case "TerminosUso.html":
+        case "PoliticaPrivacidad.html":
+            console.log("en tu");
+            var inicioUrl ="../index.html" ;//default uris
+            var noticiasUrl = "../news/Noticias.html";//default uris
+            //por si acaso 
+            //var termsUri ="legal/TerminosUso.html";
+            //var policyUri ="legal/PoliticaPrivacidad.html"
+            break;
+        default:
+            console.log("en index"); 
+            break;
+    }
+
+    appendMainNav(logoSrc, inicioUrl, noticiasUrl);
 
     /*2d array of languages*/
         var aLangKeys = new Array();
@@ -37,21 +71,21 @@ $(document).ready(function () {
         curr_lang = spanis_lc;
         var public_ip;
     /*ipfi */
-    $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
+    /*$.getJSON("https://api.ipify.org?format=jsonp&callback=?",
         function (json) {
             public_ip = json.ip;
             console.log(json.ip);
-            /*ipstack pasando ip publica obtenida y api key */
+            
             $.getJSON('http://api.ipstack.com/' + public_ip + '?access_key=74eda19312e616de81089ad81ac39014', function (data) {
  
                 var language_code = data.location.languages[0].code;
                 console.log("codigo lenguaje", language_code);
-                //estructura de decision para decidir el id del idioma
+                
                 if (language_code != spanis_lc) {
                     curr_lang = english_lc;
                 }
                 console.log("current language", curr_lang);
-                /*cambio del idioma */
+
                 $('.tr').each(function (i) {
                     $(this).text(aLangKeys[curr_lang][$(this).attr('key')]);
                 });
@@ -59,7 +93,7 @@ $(document).ready(function () {
             });
         }
 
-    );
+    );*/
 
 	$('.carousel').carousel({
 		interval: 3000
@@ -85,13 +119,19 @@ $(document).ready(function () {
 		$("#secondSlide").attr("src", "images/Movil/MovilSlider_OllieKeyboardAd.jpg");
 		$("#thirdSlide").attr("src", "images/Movil/SliderOlliePersonajesFutbolin.png");
     }
-    appendMainNav(logoSrc);
+    
     //$.cookieBar({});
 });
-
+//para obtener el nombre de nuestra pagina actual y asi asignar las uris
+function getPageName(currLocation){
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
+    page.split('#');
+    return page;
+}
 
 //para concatenar nav
-function appendMainNav(logo){
+function appendMainNav(logo,homeUrl, newsUrl){
     const htmlNav = `<button id="sidebar-target" class="navbar-toggler" type="button" aria-controls="navbarToggler"
         aria-expanded="false" aria-label="Toggle navigation">
            <span class="navbar-toggler-icon"></span>
@@ -106,10 +146,10 @@ function appendMainNav(logo){
            <!-- Links -->
            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                <li class="nav-item " id="liInicio">
-                   <a class="nav-link tr" key="home"  href="#">Inicio</a>
+                   <a class="nav-link tr" key="home"  href="`+homeUrl+`">Inicio</a>
                </li>
                <li class="nav-item ">
-                   <a class="nav-link tr" key="news"  href="news/Noticias.html">Noticias</a>
+                   <a class="nav-link tr" key="news"  href="`+newsUrl+`">Noticias</a>
                </li>
                <li class="nav-item dropdown">
                    <a class="nav-link dropdown-toggle tr" key="products" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -141,10 +181,10 @@ function appendMainNav(logo){
     
     const customSideMenuHtml = `<ul class="nav navbar-nav mr-auto mt-2 mt-lg-0 customUlSidenav">
             <li class="nav-item " id="liInicio">
-                <a class="nav-link tr" key="home" href="#">Inicio</a>
+                <a class="nav-link tr" key="home" href="`+homeUrl+`">Inicio</a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link tr" key="news" href="#">Noticias</a>
+                <a class="nav-link tr" key="news" href="`+newsUrl+`">Noticias</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link" key="products" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
