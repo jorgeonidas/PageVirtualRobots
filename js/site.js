@@ -52,7 +52,7 @@ $(document).ready(function () {
         aLangKeys['es']['legal-terms'] = "Términos de Uso";
         aLangKeys['es']['and'] = "y";
         aLangKeys['es']['legal-policy'] = "Política de Privacidad";
-
+        aLangKeys['es']['ppu'] = "Última actualización: 04/2018"
         //pagina de terminos de uso
         aLangKeys['es']['lt1'] = "Elegibilidad";
         aLangKeys['es']['lt2'] = "Privacidad";
@@ -67,7 +67,17 @@ $(document).ready(function () {
         aLangKeys['es']['lt11'] = "Resolución de conflictos; Arbitraje individual vinculante; Renuncia de acción de clase";
         aLangKeys['es']['lt12'] = "Misceláneo";
         aLangKeys['es']['lt13'] = "Cambios a estos términos";
-
+        //pagina de politica de privacicad
+        aLangKeys['es']['ppt'] = "Política de privacidad de Virtual Robot";
+        
+        aLangKeys['es']['pp1'] = "1. Tipos de información que recopilamos";
+        aLangKeys['es']['pp2'] = "2. Cómo usamos tu información";
+        aLangKeys['es']['pp3'] = "3. Cómo se comparte su información";
+        aLangKeys['es']['pp4'] = "4. Tus controles y elecciones";
+        aLangKeys['es']['pp5'] = "5. Seguridad de la información";
+        aLangKeys['es']['pp6'] = "6. Información sobre niños";
+        aLangKeys['es']['pp7'] = "7. Cambios";
+        aLangKeys['es']['pp8'] = "8. Información de contacto";
 
         aLangKeys['en']['home'] = "Home";
         aLangKeys['en']['news'] = "News";
@@ -81,7 +91,7 @@ $(document).ready(function () {
         aLangKeys['en']['legal-terms'] = "Terms of Use";
         aLangKeys['en']['and'] = "and";
         aLangKeys['en']['legal-policy'] = "Privacy Policy";
-
+        aLangKeys['en']['ppu'] = "Last update: 04/2018"
         //terms of use
         aLangKeys['en']['lt1'] = "Eligibility";
         aLangKeys['en']['lt2'] = "Privacy";
@@ -96,6 +106,17 @@ $(document).ready(function () {
         aLangKeys['en']['lt11'] = "Conflict resolution; Individual binding arbitration; Class action waiver";
         aLangKeys['en']['lt12'] = "Miscellaneous";
         aLangKeys['en']['lt13'] = "Changes to these terms";
+
+        //privacy policy
+        aLangKeys['en']['ppt'] = "Virtual Robot privacy policy";
+        aLangKeys['en']['pp1'] = "1. Types of information we collect";
+        aLangKeys['en']['pp2'] = "2. How we use your information";
+        aLangKeys['en']['pp3'] = "3. How your information is shared";
+        aLangKeys['en']['pp4'] = "4. Your controls and elections";
+        aLangKeys['en']['pp5'] = "5. Information security";
+        aLangKeys['en']['pp6'] = "6. Information about children";
+        aLangKeys['en']['pp7'] = "7. Changes";
+        aLangKeys['en']['pp8'] = "8. Contact information";
       
         const spanis_lc = "es";
         const english_lc = "en";
