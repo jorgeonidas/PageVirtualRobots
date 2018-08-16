@@ -52,7 +52,23 @@ $(document).ready(function () {
         aLangKeys['es']['legal-terms'] = "Términos de Uso";
         aLangKeys['es']['and'] = "y";
         aLangKeys['es']['legal-policy'] = "Política de Privacidad";
-    
+
+        //pagina de terminos de uso
+        aLangKeys['es']['lt1'] = "Elegibilidad";
+        aLangKeys['es']['lt2'] = "Privacidad";
+        aLangKeys['es']['lt3'] = "Propiedad";
+        aLangKeys['es']['lt4'] = "Licencia limitada";
+        aLangKeys['es']['lt5'] = "Contenido de usuario y áreas interactivas";
+        aLangKeys['es']['lt6'] = "Uso aceptable de los servicios";
+        aLangKeys['es']['lt7'] = "Registro y seguridad";
+        aLangKeys['es']['lt8'] = "Servicios de modificación / terminación";
+        aLangKeys['es']['lt9'] = "Exención de garantías y limitación de responsabilidad";
+        aLangKeys['es']['lt10'] = "Indemnidad";
+        aLangKeys['es']['lt11'] = "Resolución de conflictos; Arbitraje individual vinculante; Renuncia de acción de clase";
+        aLangKeys['es']['lt12'] = "Misceláneo";
+        aLangKeys['es']['lt13'] = "Cambios a estos términos";
+
+
         aLangKeys['en']['home'] = "Home";
         aLangKeys['en']['news'] = "News";
         aLangKeys['en']['products'] = "Products";
@@ -65,6 +81,21 @@ $(document).ready(function () {
         aLangKeys['en']['legal-terms'] = "Terms of Use";
         aLangKeys['en']['and'] = "and";
         aLangKeys['en']['legal-policy'] = "Privacy Policy";
+
+        //terms of use
+        aLangKeys['en']['lt1'] = "Eligibility";
+        aLangKeys['en']['lt2'] = "Privacy";
+        aLangKeys['en']['lt3'] = "Property";
+        aLangKeys['en']['lt4'] = "Limited License";
+        aLangKeys['en']['lt5'] = "User content and interactive areas";
+        aLangKeys['en']['lt6'] = "Acceptable use of services";
+        aLangKeys['en']['lt7'] = "Registration and security";
+        aLangKeys['en']['lt8'] = "Modification / termination services";
+        aLangKeys['en']['lt9'] = "Exemption of guarantees and limitation of liability";
+        aLangKeys['en']['lt10'] = "Indemnity";
+        aLangKeys['en']['lt11'] = "Conflict resolution; Individual binding arbitration; Class action waiver";
+        aLangKeys['en']['lt12'] = "Miscellaneous";
+        aLangKeys['en']['lt13'] = "Changes to these terms";
       
         const spanis_lc = "es";
         const english_lc = "en";
