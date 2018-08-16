@@ -71,7 +71,7 @@ $(document).ready(function () {
         curr_lang = spanis_lc;
         var public_ip;
     /*ipfi */
-    /*$.getJSON("https://api.ipify.org?format=jsonp&callback=?",
+    $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
         function (json) {
             public_ip = json.ip;
             console.log(json.ip);
@@ -93,7 +93,7 @@ $(document).ready(function () {
             });
         }
 
-    );*/
+    );
 
 	$('.carousel').carousel({
 		interval: 3000
