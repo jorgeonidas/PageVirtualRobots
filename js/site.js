@@ -1,4 +1,14 @@
 $(document).ready(function () {
+    //altura altura del contenido en proporcion con respecto al documento
+    contentHeight =Math.floor( $('#main').height() / $('#main').parent().height() * 100);
+    console.log("alto del doc",contentHeight,'%');
+    
+    //chequeando altura del contenido para posicionar footer al fondo
+    if(contentHeight< 55){
+        $(".footer").addClass("bottom-footer");
+    }
+    
+
     var inicioUrl ="#" ;//default uris
     var noticiasUrl = "news/Noticias.html";//default uris
     //por si acaso 
@@ -38,6 +48,7 @@ $(document).ready(function () {
     }
 
     appendMainNav(logoSrc, inicioUrl, noticiasUrl);
+    appendFooter();
 
     /*2d array of languages*/
         var aLangKeys = new Array();
@@ -248,6 +259,52 @@ function getPageName(currLocation){
     var page = path.split("/").pop();
     page.split('#');
     return page;
+}
+
+//para concatenar footer
+function appendFooter(){
+    const htmlFooter = `<hr class="featurette-divider">
+    <div class="container ">
+
+        <div class="row ">
+
+            <div class="col-2 col-lg-1 offset-lg-5 offset-3">
+                <a href="https://www.facebook.com/robotvirtual/">
+                    <i style="font-size:1.6rem;" class="fa text-muted">&#xf082;</i>
+                </a>
+            </div>
+            <div class="col-2  col-lg-1">
+                <a href="https://twitter.com/robotvirtual">
+                    <i style="font-size:1.6rem;" class="fa text-muted">&#xf099;</i>
+                </a>
+            </div>
+            <div class=" col-2  col-lg-1">
+                <a href="http://instagram.com/robotvirtual">
+                    <i style="font-size:1.6rem;" class="fa text-muted">&#xf16d;</i>
+                </a>
+            </div>
+
+
+
+        </div>
+        <div class="row">
+            <div id="footer-p" class="offset-lg-1 text-center">
+                <p class="text-muted">
+                    <p style="margin: 0; padding: 0; text-decoration: none; display: inline; font-size:0.8rem;" key="copyright" class="text-muted tr">
+                        © 2016 - 2018 Virtual Robot®. Biowiza S.A. Todos los derechos reservados. Costa Rica. Puedes revisar nuestros
+                    </p>
+                    <a style="font-size:0.8rem;" class="links tr" key="legal-terms" href="legal/TerminosUso.html">Términos de Uso </a>
+                    <p style="margin: 0; padding: 0; text-decoration: none; display: inline; font-size:0.8rem;" key="and" class="text-muted tr">
+                        y
+                    </p>
+                    <a style="font-size:0.8rem;" class="links tr" key="legal-policy" href="legal/PoliticaPrivacidad.html">
+                        Política de Privacidad</a> .
+                </p>
+            </div>
+
+        </div>
+    </div>`;
+    $("#targetFooter").append(htmlFooter);
 }
 
 //para concatenar nav
