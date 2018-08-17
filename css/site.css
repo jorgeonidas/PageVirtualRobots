@@ -32,7 +32,7 @@
 
   li.nav-item>a, #liInicio>a{
     font-size: 16px;
-    font-weight:bold;
+    font-weight:normal;
   }
   
   #registro-btn{
@@ -44,7 +44,7 @@
  .navbar-nav>li>a:hover, #liInicio>a 
   {
     text-decoration: none;
-	  font-weight:normal;
+	  font-weight:bold;
 	  border-bottom: 5px solid #f9a01b;
   }
   
