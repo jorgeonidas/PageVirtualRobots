@@ -270,25 +270,22 @@ function appendFooter(){
 
             <div class="col-2 col-lg-1 offset-lg-5 offset-3">
                 <a href="https://www.facebook.com/robotvirtual/">
-                    <i style="font-size:1.6rem;" class="fa text-muted">&#xf082;</i>
+                    <i  class="fa text-muted social-icons">&#xf082;</i>
                 </a>
             </div>
             <div class="col-2  col-lg-1">
                 <a href="https://twitter.com/robotvirtual">
-                    <i style="font-size:1.6rem;" class="fa text-muted">&#xf099;</i>
+                    <i class="fa text-muted social-icons">&#xf099;</i>
                 </a>
             </div>
             <div class=" col-2  col-lg-1">
                 <a href="http://instagram.com/robotvirtual">
-                    <i style="font-size:1.6rem;" class="fa text-muted">&#xf16d;</i>
+                    <i class="fa text-muted social-icons">&#xf16d;</i>
                 </a>
             </div>
-
-
-
         </div>
-        <div class="row">
-            <div id="footer-p" class="offset-lg-1 text-center">
+        <div class="row text-center">
+            <div id="footer-p" class="text-center">
                 <p class="text-muted">
                     <p style="margin: 0; padding: 0; text-decoration: none; display: inline; font-size:0.8rem;" key="copyright" class="text-muted tr">
                         © 2016 - 2018 Virtual Robot®. Biowiza S.A. Todos los derechos reservados. Costa Rica. Puedes revisar nuestros
