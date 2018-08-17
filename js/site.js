@@ -28,6 +28,10 @@ $(document).ready(function () {
             //var termsUri ="legal/TerminosUso.html";
             //var policyUri ="legal/PoliticaPrivacidad.html"
             break;
+        case "OllieKeyboardnews.html":
+            var inicioUrl ="../../index.html" ;//default uris
+            var noticiasUrl = "../../news/Noticias.html";//default uris
+        break;
         default:
             console.log("en index"); 
             break;
