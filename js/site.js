@@ -1,3 +1,6 @@
+
+var sidebarOpen = false
+var locked = false
 $(document).ready(function () {
     //removeActive();
     //altura altura del contenido en proporcion con respecto al documento
@@ -9,7 +12,6 @@ $(document).ready(function () {
         $(".footer").addClass("bottom-footer");
     }
     
-
     var inicioUrl ="#" ;//default uris
     var noticiasUrl = "news/Noticias.html";//default uris
     //por si acaso 
@@ -259,6 +261,29 @@ $(document).ready(function () {
     }
     
     //$.cookieBar({});
+    
+
+
+    //SIDEBAR LISTENER
+    const sidebarButton = document.getElementById('sidebar-target')
+    console.log(sidebarButton);
+
+    if (sidebarButton) {
+        sidebarButton.addEventListener('click', () => {
+            if (locked) {
+                return
+            }
+            locked = true
+            if (sidebarOpen) {
+                sidebarOpen = closeSidebar();
+            } else {
+                sidebarOpen = openSidebar();
+            }
+            locked = false
+            console.log("sidebar open",sidebarOpen);
+        });
+        
+    }
 });
 //para obtener el nombre de nuestra pagina actual y asi asignar las uris
 function getPageName(currLocation){
@@ -338,7 +363,7 @@ function appendMainNav(logo,homeUrl, newsUrl){
                        Productos
                    </a>
                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                       <a class="dropdown-item" href="#">Ollie Keyboard</a>
+                       <a class="dropdown-item" href="news/details/OllieKeyboardnews.html">Ollie Keyboard</a>
                      </div>
                </li>
            </ul>
@@ -375,7 +400,7 @@ function appendMainNav(logo,homeUrl, newsUrl){
             </li>
             <ul class="nav navbar-nav" id="productList">
                 <li  class="nav-item" >
-                    <a class="nav-link " href="#"> <img id="ollie-kb-icon" class="icon-img"  src="https://gdurl.com/Drb8" alt="">Ollie Keyboard</a>
+                    <a class="nav-link " href="news/details/OllieKeyboardnews.html"> <img id="ollie-kb-icon" class="icon-img"  src="https://gdurl.com/Drb8" alt="">Ollie Keyboard</a>
                 </li>
             </ul>
         </ul>
@@ -481,8 +506,69 @@ function logout(){
 }
 
 //Sidemenu algoritms
+function createElementFromHTML(htmlString) {
+    const div = document.createElement('div');
+    div.innerHTML = htmlString.trim();
+    return div.firstChild;
+}
 
+function openSidebar(){
+    //sidebarOpen = true
+    const body = document.getElementsByTagName("body")[0];
 
+    const contents = document.getElementById("menu-contents");
+
+    const htmlString = `
+        <div class="menu-container" id='menu-container'>
+            <div class="menu bg-dark" id='menu'>
+                
+            </div>
+        </div>
+    
+    `;
+
+    const menuContainer = createElementFromHTML(htmlString);
+
+    body.insertBefore(menuContainer,document.body.childNodes[0])
+    //body.appendChild(menuContainer);
+
+    const menu = document.getElementById("menu");
+
+    menu.appendChild(contents);
+
+    menuContainer.addEventListener('click', onMenuBackdropClicked)
+
+    menu.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+
+    contents.style.display = 'block'
+    
+    return true
+}
+
+function closeSidebar(){
+    //sidebarOpen = false
+
+    const body = document.getElementsByTagName("body")[0];
+    const contents = document.getElementById("menu-contents");
+    contents.style.display = 'none';
+    body.appendChild(contents);
+    
+    const menuContainer = document.getElementById('menu-container');
+
+    menuContainer.removeEventListener('click', onMenuBackdropClicked);
+    body.removeChild(menuContainer);
+    
+    return false;
+}
+
+function onMenuBackdropClicked(){
+    sidebarOpen = closeSidebar();
+    console.log(sidebarOpen);
+    
+}
+/*
 (() => {
     
     let sidebarOpen = false
@@ -546,10 +632,11 @@ function logout(){
         body.removeChild(menuContainer);
         
     }
-
+    
     window.addEventListener('load', () => {
         const sidebarButton = document.getElementById('sidebar-target')
-
+        console.log(sidebarButton);
+        
         if(sidebarButton){
             sidebarButton.addEventListener('click', () => {
                 if(locked){
@@ -565,4 +652,4 @@ function logout(){
             });
         }
     });
-})();
+})();*/
