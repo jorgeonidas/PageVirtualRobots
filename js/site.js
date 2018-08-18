@@ -17,6 +17,7 @@ $(document).ready(function () {
     //por si acaso 
     var termsUri ="legal/TerminosUso.html";
     var policyUri ="legal/PoliticaPrivacidad.html"
+    var ollieKeyboardUri ="news/details/OllieKeyboardnews.html"
     var currLocation = window.location.href;
     console.log(currLocation);
 
@@ -31,6 +32,7 @@ $(document).ready(function () {
                 //por si acaso 
                 termsUri ="../legal/TerminosUso.html";
                 policyUri ="../legal/PoliticaPrivacidad.html"
+                ollieKeyboardUri ="details/OllieKeyboardnews.html"
                 
             break;
         case "TerminosUso.html":
@@ -41,12 +43,14 @@ $(document).ready(function () {
             //por si acaso 
             termsUri ="TerminosUso.html";
             policyUri ="PoliticaPrivacidad.html"
+            ollieKeyboardUri ="../news/details/OllieKeyboardnews.html"
             break;
         case "OllieKeyboardnews.html":
             inicioUrl ="../../index.html" ;//default uris
             noticiasUrl = "../../news/Noticias.html";//default uris
             termsUri ="../../legal/TerminosUso.html";
             policyUri ="../../legal/PoliticaPrivacidad.html"
+            ollieKeyboardUri="#";
         break;
         default:
             console.log("en index");
@@ -54,7 +58,7 @@ $(document).ready(function () {
             break;
     }
     
-    appendMainNav(logoSrc, inicioUrl, noticiasUrl);
+    appendMainNav(logoSrc, inicioUrl, noticiasUrl,ollieKeyboardUri);
     currentActivePage(pageName);
     appendFooter(termsUri,policyUri);
     
@@ -337,14 +341,14 @@ function appendFooter(termsUri,policyUri){
 }
 
 //para concatenar nav
-function appendMainNav(logo,homeUrl, newsUrl){
+function appendMainNav(logo,homeUrl, newsUrl,olliekUrl){
     const htmlNav = `<button id="sidebar-target" class="navbar-toggler" type="button" aria-controls="navbarToggler"
         aria-expanded="false" aria-label="Toggle navigation">
            <span class="navbar-toggler-icon"></span>
        </button>
   
        <!-- Brand/logo -->
-       <a class="navbar-brand mx-auto" href="#">
+       <a class="navbar-brand mx-auto" href="`+homeUrl+`">
            <img class="d-block" id="navBarBrand" src="`+logo+`" alt="Logo">
        </a>
 
@@ -363,11 +367,11 @@ function appendMainNav(logo,homeUrl, newsUrl){
                        Productos
                    </a>
                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                       <a class="dropdown-item" href="news/details/OllieKeyboardnews.html">Ollie Keyboard</a>
+                       <a class="dropdown-item" href="`+olliekUrl+`">Ollie Keyboard</a>
                      </div>
                </li>
            </ul>
-
+            <!--
            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                <li class="nav-item">
                    <a class="nav-link tr" key="sign-in" id="registro-btn" href="#">
@@ -377,6 +381,7 @@ function appendMainNav(logo,homeUrl, newsUrl){
                    </a>
                </li>
            </ul>
+           -->
        </div>
 
        <button style="font-size: 20px" class="navbar-toggler signIn" type="button">
@@ -400,10 +405,11 @@ function appendMainNav(logo,homeUrl, newsUrl){
             </li>
             <ul class="nav navbar-nav" id="productList">
                 <li  class="nav-item" >
-                    <a class="nav-link " href="news/details/OllieKeyboardnews.html"> <img id="ollie-kb-icon" class="icon-img"  src="https://gdurl.com/Drb8" alt="">Ollie Keyboard</a>
+                    <a class="nav-link " href="`+olliekUrl+`"> <img id="ollie-kb-icon" class="icon-img"  src="https://gdurl.com/Drb8" alt="">Ollie Keyboard</a>
                 </li>
             </ul>
         </ul>
+        <!--
         <ul id="login" class="nav navbar-nav">
             <li class="nav-item">
                 <a class="nav-link tr" key="log-in" id="registro-btn" href="#" onclick="login()">
@@ -413,6 +419,7 @@ function appendMainNav(logo,homeUrl, newsUrl){
                 </a>
             </li>
         </ul>
+        -->
         <div id="account-info">
             <div class="row" style="padding-left: 3vw">
                 <div class="col" >
