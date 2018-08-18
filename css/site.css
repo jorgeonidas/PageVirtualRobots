@@ -64,7 +64,7 @@ body{
     border-bottom: none;
   }
 
- .navbar-nav>li>a:hover, #liInicio>a 
+ .navbar-nav>li>a:hover, .active-page
   {
     text-decoration: none;
 	  font-weight:bold;

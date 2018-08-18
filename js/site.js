@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    //removeActive();
     //altura altura del contenido en proporcion con respecto al documento
     contentHeight =Math.floor( $('#main').height() / $('#main').parent().height() * 100);
     console.log("alto del doc",contentHeight,'%');
@@ -12,8 +13,8 @@ $(document).ready(function () {
     var inicioUrl ="#" ;//default uris
     var noticiasUrl = "news/Noticias.html";//default uris
     //por si acaso 
-    //var termsUri ="legal/TerminosUso.html";
-    //var policyUri ="legal/PoliticaPrivacidad.html"
+    var termsUri ="legal/TerminosUso.html";
+    var policyUri ="legal/PoliticaPrivacidad.html"
     var currLocation = window.location.href;
     console.log(currLocation);
 
@@ -23,32 +24,38 @@ $(document).ready(function () {
     switch (pageName) {
         case "Noticias.html":
             console.log("en noticias");
-                var inicioUrl ="../index.html" ;//default uris
-                var noticiasUrl = "#";//default uris
+               inicioUrl ="../index.html" ;//default uris
+                noticiasUrl = "#";//default uris
                 //por si acaso 
-                //var termsUri ="../legal/TerminosUso.html";
-                //var policyUri ="../legal/PoliticaPrivacidad.html"
+                termsUri ="../legal/TerminosUso.html";
+                policyUri ="../legal/PoliticaPrivacidad.html"
+                
             break;
         case "TerminosUso.html":
         case "PoliticaPrivacidad.html":
             console.log("en tu");
-            var inicioUrl ="../index.html" ;//default uris
-            var noticiasUrl = "../news/Noticias.html";//default uris
+            inicioUrl ="../index.html" ;//default uris
+            noticiasUrl = "../news/Noticias.html";//default uris
             //por si acaso 
-            //var termsUri ="legal/TerminosUso.html";
-            //var policyUri ="legal/PoliticaPrivacidad.html"
+            termsUri ="TerminosUso.html";
+            policyUri ="PoliticaPrivacidad.html"
             break;
         case "OllieKeyboardnews.html":
-            var inicioUrl ="../../index.html" ;//default uris
-            var noticiasUrl = "../../news/Noticias.html";//default uris
+            inicioUrl ="../../index.html" ;//default uris
+            noticiasUrl = "../../news/Noticias.html";//default uris
+            termsUri ="../../legal/TerminosUso.html";
+            policyUri ="../../legal/PoliticaPrivacidad.html"
         break;
         default:
-            console.log("en index"); 
+            console.log("en index");
+
             break;
     }
-
+    
     appendMainNav(logoSrc, inicioUrl, noticiasUrl);
-    appendFooter();
+    currentActivePage(pageName);
+    appendFooter(termsUri,policyUri);
+    
 
     /*2d array of languages*/
         var aLangKeys = new Array();
@@ -229,7 +236,7 @@ $(document).ready(function () {
 	$('.carousel').carousel({
 		interval: 3000
 	})
-    $("#liInicio").hover();
+    //$("#liInicio").hover();
     
     var logoSrc;
 
@@ -262,7 +269,7 @@ function getPageName(currLocation){
 }
 
 //para concatenar footer
-function appendFooter(){
+function appendFooter(termsUri,policyUri){
     const htmlFooter = `<hr class="featurette-divider">
     <div class="container ">
 
@@ -290,11 +297,11 @@ function appendFooter(){
                     <p style="margin: 0; padding: 0; text-decoration: none; display: inline; font-size:0.8rem;" key="copyright" class="text-muted tr">
                         © 2016 - 2018 Virtual Robot®. Biowiza S.A. Todos los derechos reservados. Costa Rica. Puedes revisar nuestros
                     </p>
-                    <a style="font-size:0.8rem;" class="links tr" key="legal-terms" href="legal/TerminosUso.html">Términos de Uso </a>
+                    <a style="font-size:0.8rem;" class="links tr" key="legal-terms" href="`+termsUri+`">Términos de Uso </a>
                     <p style="margin: 0; padding: 0; text-decoration: none; display: inline; font-size:0.8rem;" key="and" class="text-muted tr">
                         y
                     </p>
-                    <a style="font-size:0.8rem;" class="links tr" key="legal-policy" href="legal/PoliticaPrivacidad.html">
+                    <a style="font-size:0.8rem;" class="links tr" key="legal-policy" href="`+policyUri+`">
                         Política de Privacidad</a> .
                 </p>
             </div>
@@ -319,11 +326,11 @@ function appendMainNav(logo,homeUrl, newsUrl){
        <div class="collapse navbar-collapse" id="navbarToggler">
            <!-- Links -->
            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-               <li class="nav-item " id="liInicio">
-                   <a class="nav-link tr" key="home"  href="`+homeUrl+`">Inicio</a>
+               <li class="nav-item" id="liInicio">
+                   <a id="aInicio" class="nav-link tr" key="home"  href="`+homeUrl+`">Inicio</a>
                </li>
                <li class="nav-item ">
-                   <a class="nav-link tr" key="news"  href="`+newsUrl+`">Noticias</a>
+                   <a id="aNoticias" class="nav-link tr" key="news"  href="`+newsUrl+`">Noticias</a>
                </li>
                <li class="nav-item dropdown">
                    <a class="nav-link dropdown-toggle tr" key="products" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -401,6 +408,29 @@ function appendMainNav(logo,homeUrl, newsUrl){
 
     $("#main-nav").append(htmlNav);
     $("#menu-contents").append(customSideMenuHtml);
+}
+
+function currentActivePage(pageName) {
+    switch (pageName) {
+        case "Noticias.html":
+            $("#aNoticias").addClass("active-page");
+            break;
+        case "TerminosUso.html":
+        case "PoliticaPrivacidad.html":
+
+            break;
+        case "OllieKeyboardnews.html":
+
+        break;
+        default:
+            $("#aInicio").addClass("active-page");
+            break;
+    }
+}
+
+function removeActive(){
+    $(".nav-link").removeClass("active-page");
+    //$("#aNoticias").removeClass("active-page");
 }
 
 //scroll function
