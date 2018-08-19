@@ -8,7 +8,7 @@ $(document).ready(function () {
     console.log("alto del doc",contentHeight,'%');
     
     //chequeando altura del contenido para posicionar footer al fondo
-    if(contentHeight< 55){
+    if(contentHeight< 70){
         $(".footer").addClass("bottom-footer");
     }
     
@@ -227,9 +227,9 @@ $(document).ready(function () {
 
                 if (language_code != spanis_lc) {
                     curr_lang = english_lc;
+                    replaceImages();
                 }
                 console.log("current language", curr_lang);
-
                 $('.tr').each(function (i) {
                     $(this).text(aLangKeys[curr_lang][$(this).attr('key')]);
                 });
@@ -266,8 +266,6 @@ $(document).ready(function () {
     
     //$.cookieBar({});
     
-
-
     //SIDEBAR LISTENER
     const sidebarButton = document.getElementById('sidebar-target')
     console.log(sidebarButton);
@@ -575,6 +573,31 @@ function onMenuBackdropClicked(){
     console.log(sidebarOpen);
     
 }
+//reemplazo por imagenes a ingles
+function replaceImages() {
+    let enOllieKSliderAdd = "images/English/DesktopSlider_OllieKeyboardAd.png";
+    let enOllieKNew = "images/English/OllieKeyboardNews.png"
+    //mobile
+    let EnMobSliderOllieKeyboardAd = "images/English/Mobile/MobileSlider_OllieKeyboardAd.png";
+    let EnMobSliderOllieCharacters = "images/English/Mobile/Slider_OllieCharacters.png";
+    let EnMobSliderOllieFubolin = "images/English/Mobile/SliderOlliePersonajesFutbolin.png";
+    //new previewe
+    let enOllieKNewPreview = "images/English/OllieKeyboardMainWebsitePreview.png"
+    /*#innews-ollie-k-preview */
+    $("#ollie-k-preview").attr("src", enOllieKNewPreview);
+    $("#innews-ollie-k-preview").attr("src", "../"+enOllieKNewPreview);
+    //index
+    if ($(window).width() > 739) {
+        $("#secondSlide").attr("src", enOllieKSliderAdd);
+    } else {
+        $("#firstSlide").attr("src", EnMobSliderOllieCharacters);
+        $("#secondSlide").attr("src", EnMobSliderOllieKeyboardAd);
+        $("#thirdSlide").attr("src", EnMobSliderOllieFubolin);
+    }
+
+}
+
+
 /*
 (() => {
     
