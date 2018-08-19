@@ -581,12 +581,21 @@ function replaceImages() {
     let EnMobSliderOllieKeyboardAd = "images/English/Mobile/MobileSlider_OllieKeyboardAd.png";
     let EnMobSliderOllieCharacters = "images/English/Mobile/Slider_OllieCharacters.png";
     let EnMobSliderOllieFubolin = "images/English/Mobile/SliderOlliePersonajesFutbolin.png";
-    //new previewe
+    //new previewev
     let enOllieKNewPreview = "images/English/OllieKeyboardMainWebsitePreview.png"
+    //playstore & gooogle play
+    let googlePlay = "images/English/GoolePlayEng.png";
+    let appStore =  "images/English/AppStoreEng.png"
+
     /*#innews-ollie-k-preview */
     $("#ollie-k-preview").attr("src", enOllieKNewPreview);
     //en pagina noticias
-    $("#innews-ollie-k-preview").attr("src", "../"+enOllieKNewPreview);
+    $("#innews-ollie-k-preview").attr("src", "../"+enOllieKNewPreview); 
+    //OllieKeyboard
+    $("#ollie-keyboard").attr("src", "../../"+enOllieKNew);
+    $("#google-play").attr("src", "../../"+googlePlay); 
+    $("#app-store").attr("src", "../../"+appStore); 
+    
     //index
     if ($(window).width() > 739) {
         $("#secondSlide").attr("src", enOllieKSliderAdd);
