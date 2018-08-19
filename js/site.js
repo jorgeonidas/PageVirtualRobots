@@ -8,7 +8,7 @@ $(document).ready(function () {
     console.log("alto del doc",contentHeight,'%');
     
     //chequeando altura del contenido para posicionar footer al fondo
-    if(contentHeight< 70){
+    if(contentHeight< 75){
         $(".footer").addClass("bottom-footer");
     }
     
@@ -585,6 +585,7 @@ function replaceImages() {
     let enOllieKNewPreview = "images/English/OllieKeyboardMainWebsitePreview.png"
     /*#innews-ollie-k-preview */
     $("#ollie-k-preview").attr("src", enOllieKNewPreview);
+    //en pagina noticias
     $("#innews-ollie-k-preview").attr("src", "../"+enOllieKNewPreview);
     //index
     if ($(window).width() > 739) {
