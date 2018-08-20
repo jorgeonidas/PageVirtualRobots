@@ -119,6 +119,9 @@ $(document).ready(function () {
         aLangKeys['en']['legal-terms'] = "Terms of Use";
         aLangKeys['en']['and'] = "and";
         aLangKeys['en']['legal-policy'] = "Privacy Policy";
+        aLangKeys['en']['legal-policy'] = "Privacy Policy";
+        aLangKeys['en']['okn-p1'] = "With Ollie Keyboard you will be able to send funny stickers of Ollie to all your friends";
+        aLangKeys['en']['okn-p2'] = "Get it in Google Play Store and Apple iMessages.";
         aLangKeys['en']['ppu'] = "Last update: 04/2018"
         //terms of use
         aLangKeys['en']['lt1'] = "Eligibility";
@@ -596,6 +599,7 @@ function replaceImages() {
     //
     $("#google-play").attr("src", "../../"+googlePlay); 
     $("#app-store").attr("src", "../../"+appStore);
+    //padding para las imagenes en ingles ya que son un poco mas grandes
     $('#google-play').addClass("p-2");
     $('#app-store').addClass("p-2");
     

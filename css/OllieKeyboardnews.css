@@ -1,0 +1,6 @@
+@media (max-width: 576px){
+    div#store-col>a>img.img-fluid{
+        width: 80%;
+    }
+
+}
