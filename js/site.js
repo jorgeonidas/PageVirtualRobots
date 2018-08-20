@@ -346,8 +346,8 @@ function appendMainNav(logo,homeUrl, newsUrl,olliekUrl){
        </button>
   
        <!-- Brand/logo -->
-       <a class="navbar-brand mx-auto" href="`+homeUrl+`">
-           <img class="d-block" id="navBarBrand" src="`+logo+`" alt="Logo">
+       <a class="navbar-brand mx-auto"  href="`+homeUrl+`">
+           <img  class="d-block mr-4" id="navBarBrand" src="`+logo+`" alt="Logo">
        </a>
 
        <div class="collapse navbar-collapse" id="navbarToggler">
