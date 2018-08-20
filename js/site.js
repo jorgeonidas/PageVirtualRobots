@@ -8,7 +8,7 @@ $(document).ready(function () {
     console.log("alto del doc",contentHeight,'%');
     
     //chequeando altura del contenido para posicionar footer al fondo
-    if(contentHeight< 75){
+    if(contentHeight < 75){
         $(".footer").addClass("bottom-footer");
     }
     
@@ -593,8 +593,11 @@ function replaceImages() {
     $("#innews-ollie-k-preview").attr("src", "../"+enOllieKNewPreview); 
     //OllieKeyboard
     $("#ollie-keyboard").attr("src", "../../"+enOllieKNew);
+    //
     $("#google-play").attr("src", "../../"+googlePlay); 
-    $("#app-store").attr("src", "../../"+appStore); 
+    $("#app-store").attr("src", "../../"+appStore);
+    $('#google-play').addClass("p-2");
+    $('#app-store').addClass("p-2");
     
     //index
     if ($(window).width() > 739) {
