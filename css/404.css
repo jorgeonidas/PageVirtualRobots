@@ -6,6 +6,10 @@
 }
 
 div.cenetered-text h1{
-    font-size: 8rem;
+    font-size: 10rem;
     font-weight: bold;
+}
+
+.main-row{
+    margin-top: 8rem;
 }
