@@ -47,6 +47,13 @@ $(document).ready(function () {
             policyUri ="../../legal/PoliticaPrivacidad.html"
             ollieKeyboardUri="#";
         break;
+        case "404.html":
+            inicioUrl ="index.html" ;//default uris
+            noticiasUrl = "news/Noticias.html";//default uris
+            termsUri ="legal/TerminosUso.html";
+            policyUri ="legal/PoliticaPrivacidad.html"
+            ollieKeyboardUri="#";
+        break;
         default:
             console.log("en index");
 
@@ -66,9 +73,10 @@ $(document).ready(function () {
     var footerHeight = $('.footer').height();
     var footerTop = $('.footer').position().top + footerHeight;
 
+
     if (footerTop < docHeight)
         $('.footer').css('margin-top', 10+ (docHeight - footerTop) + 'px');
-
+    ////
     /*2d array of languages*/
         var aLangKeys = new Array();
         aLangKeys['en'] = new Array();
@@ -297,6 +305,7 @@ $(document).ready(function () {
         
     }
 });
+
 //para obtener el nombre de nuestra pagina actual y asi asignar las uris
 function getPageName(currLocation){
     var path = window.location.pathname;
@@ -460,6 +469,9 @@ function currentActivePage(pageName) {
 
             break;
         case "OllieKeyboardnews.html":
+
+        break;
+        case "404.html":
 
         break;
         default:
