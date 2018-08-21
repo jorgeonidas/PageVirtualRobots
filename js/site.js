@@ -112,7 +112,7 @@ $(document).ready(function () {
         aLangKeys['en']['products'] = "Products";
         aLangKeys['en']['log-in'] = "Login";
         aLangKeys['en']['sign-in'] = "Signin";
-        aLangKeys['en']['ollie-keyboard-ad'] = "Now you can take Ollie by everywhere!";
+        aLangKeys['en']['ollie-keyboard-ad'] = "Now you can take Ollie with you everywhere!";
         aLangKeys['en']['see-more'] = "See More >";
         aLangKeys['en']['read-more'] = "Read More »";
         aLangKeys['en']['copyright'] = "© 2016 - 2018 Virtual Robot®. Biowiza S.A. All Rights Reserved. Costa Rica. You can check our";
@@ -211,7 +211,8 @@ $(document).ready(function () {
         aLangKeys['en']['p24'] = "We do not knowingly collect, use or share personal information from children under the age of 13 without verifiable parental consent or as permitted by law. Where a parent or legal guardian has provided consent, the child may be able to use his or her Virtual Robot Account to play certain third-party games and applications that are not published by Virtual Robot. Parents or guardians may review, modify, or delete the child’s personal information, or withdraw consent, by contacting us using the contact information provided at the end of this privacy policy, and may manage which third-party games and applications can access and use the child’s Virtual Robot Account information through parental controls.";
         aLangKeys['en']['p25'] = `Virtual Robot may update this privacy policy from time to time. When we update it, we will revise the "Last Updated" date above. If we make material changes in the way we collect, use, retain or share your personal information, we will notify you by sending you an email at the last email address that you provided us, or by posting notice of the changes on the services covered by this privacy policy.`;
         aLangKeys['en']['p26'] = `If you have any questions, concerns or comments regarding this privacy policy, or any of our privacy practices, please contact us via email at`;
-        
+        //404
+        aLangKeys['en']['ErrMsj'] = "Even Ollie makes mistakes";
         const spanis_lc = "es";
         const english_lc = "en";
         curr_lang = spanis_lc;
