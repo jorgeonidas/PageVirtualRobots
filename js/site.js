@@ -4,13 +4,8 @@ var locked = false
 $(document).ready(function () {
     //removeActive();
     //altura altura del contenido en proporcion con respecto al documento
-    contentHeight =Math.floor( $('#main').height() / $('#main').parent().height() * 100);
-    console.log("alto del doc",contentHeight,'%');
-    
-    //chequeando altura del contenido para posicionar footer al fondo
-    if(contentHeight < 75){
-        $(".footer").addClass("bottom-footer");
-    }
+    //contentHeight =Math.floor( $('#main').height() / $('#main').parent().height() * 100);
+    //console.log("alto del doc",contentHeight,'%');
     
     var inicioUrl ="#" ;//default uris
     var noticiasUrl = "news/Noticias.html";//default uris
@@ -62,6 +57,17 @@ $(document).ready(function () {
     currentActivePage(pageName);
     appendFooter(termsUri,policyUri);
     
+    //console.log( $(".footer").outerHeight());
+    console.log($(window).height());
+    console.log( $(".footer").height());
+
+    //calculo del espacio entre el footer y la pagina
+    var docHeight = $(window).height();
+    var footerHeight = $('.footer').height();
+    var footerTop = $('.footer').position().top + footerHeight;
+
+    if (footerTop < docHeight)
+        $('.footer').css('margin-top', 10+ (docHeight - footerTop) + 'px');
 
     /*2d array of languages*/
         var aLangKeys = new Array();
