@@ -53,10 +53,7 @@ body{
     padding-right: 5px;
   }
 
-  li.nav-item>a, #liInicio>a{
-    font-size: 16px;
-    font-weight:normal;
-  }
+
   
   #registro-btn{
     text-decoration: none;
@@ -69,6 +66,11 @@ body{
     text-decoration: none;
 	  font-weight:bold;
 	  border-bottom: 5px solid #f9a01b;
+  }
+
+  li.nav-item>a, #liInicio>a{
+    font-size: 16px;
+    /*font-weight:normal;*/
   }
   
   #link-vermas{
