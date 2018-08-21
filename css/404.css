@@ -21,6 +21,12 @@ p#ErrMsj,h5{
     color: #454545;
 }
 
+@media (max-width: 992px){
+    .main-row{
+        margin-top:0;
+    }
+}
+
 @media (max-width: 768px){
     .container .first_div {
         -webkit-box-ordinal-group: 2;
@@ -38,12 +44,12 @@ p#ErrMsj,h5{
         order: 1;
       }
 
-    .main-row{
-        margin-top:0;
+    div.cenetered-text h1{
+        font-size:35vw;
+        font-weight: bold;
     }
 
-    div.cenetered-text h1{
-        font-size:40vw;
-        font-weight: bold;
+    p#ErrMsj,h5#ErrMsj{
+        font-size: 4vw;
     }
 }
