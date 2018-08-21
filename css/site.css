@@ -61,16 +61,22 @@ body{
     border-bottom: none;
   }
 
- .navbar-nav>li>a:hover, .active-page
+ .navbar-nav>li>a:hover
   {
     text-decoration: none;
-	  font-weight:bold;
+	  font-weight:bolder;
+	  border-bottom: 5px solid #f9a01b;
+  }
+  /*nav link de pagina actualmente activa*/
+  a.active-page{
+    text-decoration: none;
+    font-weight:bolder;
+    color: #ffffff !important;
 	  border-bottom: 5px solid #f9a01b;
   }
 
-  li.nav-item>a, #liInicio>a{
+  li.nav-item>a{
     font-size: 16px;
-    /*font-weight:normal;*/
   }
   
   #link-vermas{
