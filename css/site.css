@@ -234,9 +234,24 @@ body{
     padding: 1vh 15vw 1vh 10vw;
   }
 
+  #ppmobile{
+    display: none;
+  }
+
+  .paypal{
+    display: block;
+  }
 }
 
 @media (max-width: 992px){
+
+  #ppmobile{
+    display: block;
+  }
+
+  .paypal{
+    display: none;
+  }
 
   .navbar-nav .nav-link {
     padding-right: 0;

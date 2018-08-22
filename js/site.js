@@ -73,6 +73,7 @@ $(document).ready(function () {
     var footerHeight = $('.footer').height();
     var footerTop = $('.footer').position().top + footerHeight;
 
+    //removePPDesktop();
 
     if (footerTop < docHeight)
         $('.footer').css('margin-top', 10+ (docHeight - footerTop) + 'px');
@@ -305,6 +306,18 @@ $(document).ready(function () {
         
     }
 });
+/*
+$(window).resize(function () {
+    removePPDesktop();
+});*/
+/*
+function removePPDesktop(){
+    if($(window).width() < 992){
+        console.log("remove");  
+        $( "#ppdesktop" ).remove();
+        $()
+    }
+}*/
 
 //para obtener el nombre de nuestra pagina actual y asi asignar las uris
 function getPageName(currLocation){
