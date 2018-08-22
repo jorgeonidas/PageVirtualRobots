@@ -229,8 +229,8 @@ body{
   .navbar-nav .nav-link {
     padding-right: 0;
     padding-left: 4vw;
-    padding-bottom: 1vh;
-    padding-top: 1vh;
+    padding-bottom: 1vw;
+    padding-top: 1vw;
   }
   .navbar-nav>li>a, #liInicio>a 
   {
@@ -281,6 +281,15 @@ body{
   }
   #link-vermas{
     max-width: 50%;
+  }
+}
+
+@media(orientation: landscape){
+  .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 4vw;
+    padding-bottom: 2.5vw;
+    padding-top: 2.5vw;
   }
 }
 
