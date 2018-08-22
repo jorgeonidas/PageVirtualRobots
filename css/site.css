@@ -219,6 +219,15 @@ body{
   align-items: center;
 }
 
+.paypal{
+  position: absolute;
+  left: 53vw;
+  top: 5vh;
+  width: 9rem;
+  height: 15rem;
+
+}
+
 /*breack points*/
 @media (min-width: 992px) {
   .navbar {
