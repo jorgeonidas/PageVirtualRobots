@@ -52,9 +52,12 @@ body{
     padding-left: 5px;
     padding-right: 5px;
   }
-
-
-  
+/*//por si los quiere mas pegados
+  .nav-link{
+    padding-top: 0;
+    padding-bottom: 0;
+  } 
+*/  
   #registro-btn{
     text-decoration: none;
     font-weight:normal;
@@ -284,7 +287,7 @@ body{
   }
 }
 
-@media(orientation: landscape){
+@media (max-width: 992px) and (orientation: landscape){
   .navbar-nav .nav-link {
     padding-right: 0;
     padding-left: 4vw;
