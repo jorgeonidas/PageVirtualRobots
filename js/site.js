@@ -329,12 +329,12 @@ function replacePpButton(){
     `;
 
     let ppEnglishMobile = `
-    <div class="paypal-mobile col text-center">
-        <img id="donation-img" src="`+donateImgEn+`">
+    <div class="paypal-mobile text-center " style="width: 80%;margin: auto; background-color: #f3f3f3">
+        <img id="donation-img" src="`+donateImgEn+`" style="padding: 5% 0;width: 90%">
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="NU5XZ6R9TML34">
-        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <input style="width: 90%" type="hidden" name="cmd" value="_s-xclick">
+        <input style="width: 90%" type="hidden" name="hosted_button_id" value="NU5XZ6R9TML34">
+        <input style="width: 90%" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
         <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
         </form>
     </div>
