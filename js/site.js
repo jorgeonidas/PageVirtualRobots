@@ -249,6 +249,7 @@ $(document).ready(function () {
                 if (language_code != spanis_lc) {
                     curr_lang = english_lc;
                     replaceImages();
+                    replacePpButton();
                 }
                 console.log("current language", curr_lang);
                 $('.tr').each(function (i) {
@@ -312,6 +313,38 @@ $(document).ready(function () {
 $(window).resize(function () {
     footerPlacement();
 });
+
+function replacePpButton(){
+   let donateImgEn ="images/English/Donation.png"
+    let ppEnglishDesktiop = `
+    <div class="paypal">
+        <img id="donation-img" src="`+donateImgEn+`" style="width: 100%;height: 80%">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="NU5XZ6R9TML34">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+    </div>
+    `;
+
+    let ppEnglishMobile = `
+    <div class="paypal-mobile col text-center">
+        <img id="donation-img" src="`+donateImgEn+`">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="NU5XZ6R9TML34">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+    </div>
+    `;
+
+    $('.paypal').replaceWith( ppEnglishDesktiop );
+    $('.paypal-mobile').replaceWith( ppEnglishMobile );
+
+    
+}
 
 function footerPlacement(){
     //console.log($(window).height());
@@ -630,8 +663,6 @@ function replaceImages() {
     //playstore & gooogle play
     let googlePlay = "images/English/GoolePlayEng.png";
     let appStore =  "images/English/AppStoreEng.png"
-    //paypal
-    let donateImgEn ="images/English/Donation.png"
 
     /*#innews-ollie-k-preview */
     $("#ollie-k-preview").attr("src", enOllieKNewPreview);
@@ -646,8 +677,8 @@ function replaceImages() {
     $('#google-play').addClass("p-2");
     $('#app-store').addClass("p-2");
     //
-    $('#donation-img').attr("src", donateImgEn);
-    $('#donation-img-m').attr("src", donateImgEn);
+    //$('#donation-img').attr("src", donateImgEn);
+    //$('#donation-img-m').attr("src", donateImgEn);
     //index
     if ($(window).width() > 739) {
         $("#secondSlide").attr("src", enOllieKSliderAdd);
