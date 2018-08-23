@@ -308,7 +308,7 @@ $(document).ready(function () {
         
     }
 });
-
+//resize listener
 $(window).resize(function () {
     footerPlacement();
 });
@@ -617,6 +617,8 @@ function onMenuBackdropClicked(){
 }
 //reemplazo por imagenes a ingles
 function replaceImages() {
+    console.log("replacing imgs");
+    
     let enOllieKSliderAdd = "images/English/DesktopSlider_OllieKeyboardAd.png";
     let enOllieKNew = "images/English/OllieKeyboardNews.png"
     //mobile
@@ -628,6 +630,8 @@ function replaceImages() {
     //playstore & gooogle play
     let googlePlay = "images/English/GoolePlayEng.png";
     let appStore =  "images/English/AppStoreEng.png"
+    //paypal
+    let donateImgEn ="images/English/Donation.png"
 
     /*#innews-ollie-k-preview */
     $("#ollie-k-preview").attr("src", enOllieKNewPreview);
@@ -641,7 +645,9 @@ function replaceImages() {
     //padding para las imagenes en ingles ya que son un poco mas grandes
     $('#google-play').addClass("p-2");
     $('#app-store').addClass("p-2");
-    
+    //
+    $('#donation-img').attr("src", donateImgEn);
+    $('#donation-img-m').attr("src", donateImgEn);
     //index
     if ($(window).width() > 739) {
         $("#secondSlide").attr("src", enOllieKSliderAdd);
