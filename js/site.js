@@ -65,6 +65,7 @@ $(document).ready(function () {
     appendFooter(termsUri,policyUri);
     
     //console.log( $(".footer").outerHeight());
+    /*
     console.log($(window).height());
     console.log( $(".footer").height());
 
@@ -72,12 +73,13 @@ $(document).ready(function () {
     var docHeight = $(window).height();
     var footerHeight = $('.footer').height();
     var footerTop = $('.footer').position().top + footerHeight;
-
+    */
     //removePPDesktop();
 
-    if (footerTop < docHeight)
-        $('.footer').css('margin-top', 10+ (docHeight - footerTop) + 'px');
+
     ////
+    footerPlacement();
+
     /*2d array of languages*/
         var aLangKeys = new Array();
         aLangKeys['en'] = new Array();
@@ -306,18 +308,23 @@ $(document).ready(function () {
         
     }
 });
-/*
+
 $(window).resize(function () {
-    removePPDesktop();
-});*/
-/*
-function removePPDesktop(){
-    if($(window).width() < 992){
-        console.log("remove");  
-        $( "#ppdesktop" ).remove();
-        $()
-    }
-}*/
+    footerPlacement();
+});
+
+function footerPlacement(){
+    //console.log($(window).height());
+    //console.log( $(".footer").height());
+
+    //calculo del espacio entre el footer y la pagina
+    var docHeight = $(window).height();
+    var footerHeight = $('.footer').height();
+    var footerTop = $('.footer').position().top + footerHeight;
+
+    if (footerTop < docHeight)
+        $('.footer').css('margin-top', 10 + (docHeight - footerTop) + 'px');
+}
 
 //para obtener el nombre de nuestra pagina actual y asi asignar las uris
 function getPageName(currLocation){
